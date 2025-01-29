@@ -1,133 +1,175 @@
+'use client';
+import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { BookOpen, Database, Newspaper, ScrollText, Search } from "lucide-react";
+import { BookOpen, ScrollText, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from 'next/link';
+import Image from 'next/image';
 
-const dataSets = Array(4).fill({
-  title: "examples of data sets available",
-});
+const carouselImages = [
+  { src: "/1.jpeg", alt: "LEO Lab Research Activities 1" },
+  { src: "/2.jpeg", alt: "LEO Lab Workshop Session" },
+  { src: "/3.jpeg", alt: "LEO Lab Team" },
+  { src: "/4.png", alt: "LEO Lab Team" }
 
-const recentNews = Array(3).fill({
-  title: "Some information about this news",
-});
+];
+
+const workshopTopics = [
+  "Labour Economics",
+  "Personnel Economics",
+  "Behavioural Economics",
+  "Development Economics",
+  "Big Data & ML",
+  "Environmental Economics",
+  "Gig & Platform Economics",
+  "Gender Economics",
+  "Finance & Sustainability",
+  "Vocational Education & Training"
+];
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="bg-basewhite min-h-screen">
-      <div className="container mx-auto px-4 lg:px-8 py-8">
-        <section className="mb-12 md:mb-16">
-          <div className="inline-block border border-black p-3 md:p-4 mb-6">
-            <p className="text-sm md:text-base font-extrabold">
-              Leo logo and plaksha university
-            </p>
+      {/* Full-width Carousel */}
+      <div className="relative w-full h-[60vh] mb-12">
+        {carouselImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              priority={index === 0}
+            />
           </div>
+        ))}
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-x-0 bottom-8 text-center text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">LEO Lab</h1>
+          <p className="text-xl md:text-2xl">Laboratory for Economic Behavior in Organizations</p>
+        </div>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % carouselImages.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
+        >
+          <ChevronRight className="h-6 w-6" />
+        </button>
+      </div>
 
-          <Card className="mb-8">
-            <CardContent className="p-4 md:p-6">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold">
-                A small description of LEO lab
-              </h1>
+      <div className="container mx-auto px-4 lg:px-8">
+        {/* About LEO Lab */}
+        <section className="mb-16 md:mb-24">
+          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+            <CardContent className="p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">About LEO Lab</h2>
+              <div className="space-y-4 text-lg">
+                <p>
+                  The newly established lab at Plaksha University, LEO (Lab for Economic Behavior in Organizations), 
+                  facilitates research into the science of hiring in organizations, combining economics with data science 
+                  to make insightful hiring decisions for organizations.
+                </p>
+                <p>
+                  LEO's vision is to innovate in and learn from the latest scientific advances in personnel, behavioral, 
+                  experimental and organizational economics, offering insights to address grand challenges.
+                </p>
+                <p>
+                  Initiated by Dr. Prakarsh Singh, Chair Professor of Economics, Plaksha University, LEO brings together 
+                  researchers in various fields including labour, environment, and development economics.
+                </p>
+              </div>
             </CardContent>
           </Card>
-
-          <div className="relative max-w-2xl">
-            <Input
-              className="w-full pl-10 pr-24 py-2 md:py-3 bg-[var(--input-field-background)]"
-              placeholder="Article name or keywords.."
-            />
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-graygray-600" />
-            <Button className="absolute right-0 top-0 h-full bg-gradient-to-b from-blueblue-400 to-blueblue-600 text-basewhite px-4 md:px-6">
-              Search
-            </Button>
-          </div>
         </section>
 
-        <section className="mb-12 md:mb-16">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-            <Database className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">Data Sets</h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {dataSets.map((set, index) => (
-              <Card key={index} className="border border-black hover:shadow-lg transition-shadow">
-                <CardContent className="p-4 md:p-6">
-                  <p className="text-lg md:text-xl font-extrabold">{set.title}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-12 md:mb-16">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+        <section className="mb-16 md:mb-24">
+          <div className="flex items-center gap-3 md:gap-4 mb-8">
             <BookOpen className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">Recent Workshops</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Upcoming Workshop</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6">
-            <Card className="col-span-1 lg:col-span-2 bg-[var(--variable-collection-primary)] hover:shadow-lg transition-shadow">
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
-                  Details About workshop
-                </h3>
-                <Button className="mt-6 md:mt-8">Read more about workshops</Button>
+          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+            <CardContent className="p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6">The LEO Economics Conference</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
+                    <p className="text-lg">Plaksha University</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-medium">Selected participants will present their work to senior faculty members from India's leading academic institutions</p>
+                    <p className="text-sm text-gray-600">Open to Faculty, Post-docs and PhD Candidates</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-medium">Important Dates:</p>
+                    <ul className="space-y-1 text-gray-700">
+                      <li>Submission Deadline: February 28, 2025</li>
+                      <li>Notification of Acceptance: March 15, 2025</li>
+                    </ul>
+                  </div>
+                  <Link href="/workshop">
+                    <Button className="bg-leo text-white hover:bg-leo/90">Learn More</Button>
+                  </Link>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold">Topics Include:</h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {workshopTopics.map((topic, index) => (
+                      <div key={index} className="bg-white/60 p-2 rounded-md text-sm">
+                        {topic}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mb-16 md:mb-24">
+          <div className="flex items-center gap-3 md:gap-4 mb-8">
+            <ScrollText className="h-8 w-8 md:h-12 md:w-12 text-leo" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Research Highlights</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold mb-4">Latest Publications</h3>
+                <p className="text-gray-700 mb-6">Explore our recent research publications in personnel economics, behavioral science, and organizational development.</p>
+                <Link href="/research">
+                  <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">View Publications</Button>
+                </Link>
               </CardContent>
             </Card>
 
-            <div className="space-y-4">
-              {Array(2).fill(null).map((_, index) => (
-                <Card key={index} className="border border-black hover:shadow-lg transition-shadow">
-                  <CardContent className="p-4 md:p-6">
-                    <p className="text-xl md:text-2xl font-extrabold">
-                      Some photos of workshops
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="mb-12 md:mb-16">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-            <Newspaper className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">Recent News</h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {recentNews.map((news, index) => (
-              <div key={index} className="space-y-3 md:space-y-4">
-                <Card className="bg-[var(--variable-collection-primary)] hover:shadow-lg transition-shadow">
-                  <CardContent className="p-4 md:p-6 aspect-video flex items-center justify-center">
-                    <p className="text-2xl md:text-3xl">photo</p>
-                  </CardContent>
-                </Card>
-                <p className="text-xl md:text-2xl font-extrabold">{news.title}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-12 md:mb-16">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
-            <ScrollText className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold">Latest Research</h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
-            {Array(2).fill(null).map((_, index) => (
-              <Card key={index} className="bg-[var(--variable-collection-primary)] hover:shadow-lg transition-shadow">
-                <CardContent className="p-4 md:p-6">
-                  <div className="bg-basewhite p-4 mb-4 aspect-video flex items-center justify-center">
-                    <p className="text-2xl md:text-3xl">Photo</p>
-                  </div>
-                  <div className="bg-basewhite p-4">
-                    <p className="text-xl md:text-2xl">Description</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold mb-4">Research Areas</h3>
+                <p className="text-gray-700 mb-6">Our research focuses on the intersection of economics, data science, and organizational behavior to improve hiring decisions and workplace productivity.</p>
+                <Link href="/research">
+                  <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">Learn More</Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
         </section>
       </div>

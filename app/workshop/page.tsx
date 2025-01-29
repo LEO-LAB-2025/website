@@ -2,14 +2,30 @@
 import type { NextPage } from 'next';
 import Image from "next/image";
 import { useState } from 'react';
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const WorkshopPage: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const carouselImages = [
-    { src: "/vercel.svg", alt: "Workshop session 1" },
-    { src: "/next.svg", alt: "Workshop session 2" },
-    { src: "/vercel.svg", alt: "Workshop session 3" }
+    { src: "/1.jpeg", alt: "LEO Lab Research Activities" },
+    { src: "/2.jpeg", alt: "LEO Lab Workshop Session" },
+    { src: "/3.jpeg", alt: "LEO Lab Team" },
+    { src: "/4.png", alt: "LEO Lab Team" }
+  ];
+
+  const workshopTopics = [
+    "Labour Economics",
+    "Personnel Economics",
+    "Behavioural Economics",
+    "Development Economics",
+    "Big Data & ML",
+    "Environmental Economics",
+    "Gig & Platform Economics",
+    "Gender Economics",
+    "Finance & Sustainability",
+    "Vocational Education & Training"
   ];
 
   const nextSlide = () => {
@@ -25,43 +41,40 @@ const WorkshopPage: NextPage = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">Workshops</h1>
 
         {/* Call for Papers Section */}
-        <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Call for Papers</h2>
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">The LEO Economics Conference</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-            <div className="w-full md:w-1/2 space-y-6">
+            <div className="w-full md:w-2/3 space-y-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold">Workshop on Advanced Machine Learning</h3>
+                <div>
+                  <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
+                  <p className="text-lg">Plaksha University</p>
+                </div>
                 <p className="text-gray-700">
-                  Join us for an exciting workshop focused on the latest developments in machine learning.
-                  We invite researchers and practitioners to submit papers on innovative approaches and applications.
+                  Selected participants will present their work to senior faculty members from India's leading academic institutions.
+                  Open to Faculty, Post-docs and PhD Candidates.
                 </p>
               </div>
               
               <div className="space-y-2">
                 <p className="font-medium">Important Dates:</p>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Submission Deadline: March 15, 2024</li>
-                  <li>Notification: April 1, 2024</li>
-                  <li>Workshop Date: May 1-2, 2024</li>
+                  <li>Submission Deadline: February 28, 2025</li>
+                  <li>Notification of Acceptance: March 15, 2025</li>
                 </ul>
               </div>
 
-              <div className="space-y-2">
-                <p className="font-medium">Submission Guidelines:</p>
-                <p className="text-gray-700">
-                  Papers should be 6-8 pages in IEEE format. Submit through the QR code or visit our submission portal.
-                </p>
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold">Topics Include:</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  {workshopTopics.map((topic, index) => (
+                    <div key={index} className="bg-white/60 p-2 rounded-md text-sm">
+                      {topic}
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            <div className="w-48 h-48 relative bg-white p-4 rounded-lg shadow-md">
-              <Image
-                src="/vercel.svg"
-                alt="Submission QR Code"
-                fill
-                className="object-contain p-2"
-              />
             </div>
           </div>
         </div>
@@ -75,15 +88,15 @@ const WorkshopPage: NextPage = () => {
             <div className="absolute inset-0 flex items-center justify-between z-10 px-4">
               <button
                 onClick={prevSlide}
-                className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity"
+                className="bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
               >
-                ←
+                <ChevronLeft className="h-6 w-6" />
               </button>
               <button
                 onClick={nextSlide}
-                className="bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-opacity"
+                className="bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
               >
-                →
+                <ChevronRight className="h-6 w-6" />
               </button>
             </div>
             
@@ -107,26 +120,26 @@ const WorkshopPage: NextPage = () => {
 
           {/* Workshop Details */}
           <div className="max-w-4xl mx-auto space-y-6 bg-white rounded-xl p-8 shadow-sm">
-            <h3 className="text-xl font-semibold">Machine Learning Fundamentals Workshop 2023</h3>
+            <h3 className="text-xl font-semibold">LEO Lab Workshop Series 2023</h3>
             
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div>
                   <h4 className="font-medium mb-2">Event Details</h4>
                   <div className="text-gray-700 space-y-2">
-                    <p>Date: December 15-16, 2023</p>
-                    <p>Location: Virtual Event</p>
-                    <p>Participants: 150+ researchers and practitioners</p>
+                    <p>Date: December 2023</p>
+                    <p>Location: Plaksha University</p>
+                    <p>Participants: Faculty members and researchers from leading institutions</p>
                   </div>
                 </div>
 
                 <div>
                   <h4 className="font-medium mb-2">Key Topics Covered</h4>
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
-                    <li>Deep Learning Architecture Design</li>
-                    <li>Natural Language Processing</li>
-                    <li>Computer Vision Applications</li>
-                    <li>Ethical AI Development</li>
+                    <li>Economic Behavior in Organizations</li>
+                    <li>Personnel Economics Research</li>
+                    <li>Data Science in Economics</li>
+                    <li>Behavioral Economics Applications</li>
                   </ul>
                 </div>
               </div>
@@ -135,18 +148,19 @@ const WorkshopPage: NextPage = () => {
                 <div>
                   <h4 className="font-medium mb-2">Highlights</h4>
                   <p className="text-gray-700">
-                    The workshop featured keynote speeches from leading researchers,
-                    interactive sessions, and hands-on tutorials. Participants engaged
-                    in discussions about the latest trends and challenges in machine learning.
+                    The workshop series brought together researchers and practitioners
+                    to discuss innovative approaches in economic behavior and organizational
+                    decision-making. Sessions included keynote presentations and collaborative
+                    research discussions.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-medium mb-2">Outcomes</h4>
                   <p className="text-gray-700">
-                    Participants gained practical insights into implementing machine
-                    learning solutions, established valuable connections, and contributed
-                    to the advancement of the field through collaborative discussions.
+                    Participants explored cutting-edge research in personnel economics
+                    and organizational behavior, establishing valuable connections and
+                    identifying opportunities for future collaboration.
                   </p>
                 </div>
               </div>
