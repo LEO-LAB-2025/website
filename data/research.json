@@ -1,0 +1,76 @@
+{
+  "research": [
+    {
+      "id": 1,
+      "title": "Deep Learning Approaches for Quantum Computing Optimization",
+      "authors": ["John Smith", "Sarah Johnson", "Michael Chen"],
+      "date": "2023-12-01",
+      "venue": "Nature Quantum Computing",
+      "abstract": "This paper presents novel deep learning approaches for optimizing quantum computing circuits, demonstrating significant improvements in quantum error correction.",
+      "keywords": ["quantum computing", "deep learning", "optimization"],
+      "doi": "10.1234/qc.2023.001",
+      "citations": 45,
+      "type": "journal"
+    },
+    {
+      "id": 2,
+      "title": "Efficient Natural Language Processing in Low-Resource Environments",
+      "authors": ["Emily Brown", "David Wilson"],
+      "date": "2023-10-15",
+      "venue": "International Conference on Computational Linguistics",
+      "abstract": "A novel approach to NLP that requires minimal computational resources while maintaining high accuracy in language understanding tasks.",
+      "keywords": ["NLP", "low-resource computing", "efficiency"],
+      "doi": "10.5678/iccl.2023.002",
+      "citations": 23,
+      "type": "conference"
+    },
+    {
+      "id": 3,
+      "title": "Sustainable AI: Energy-Efficient Machine Learning Architectures",
+      "authors": ["Alex Martinez", "Lisa Wang", "Robert Taylor"],
+      "date": "2023-09-01",
+      "venue": "Sustainable Computing Journal",
+      "abstract": "This research introduces new machine learning architectures designed to minimize energy consumption while maintaining high performance.",
+      "keywords": ["sustainable AI", "energy efficiency", "green computing"],
+      "doi": "10.9012/sc.2023.003",
+      "citations": 31,
+      "type": "journal"
+    },
+    {
+        "id": 4,
+        "title": "Deep Learning Approaches for Quantum Computing Optimization",
+        "authors": ["John Smith", "Sarah Johnson", "Michael Chen"],
+        "date": "2023-12-01",
+        "venue": "Nature Quantum Computing",
+        "abstract": "This paper presents novel deep learning approaches for optimizing quantum computing circuits, demonstrating significant improvements in quantum error correction.",
+        "keywords": ["quantum computing", "deep learning", "optimization"],
+        "doi": "10.1234/qc.2023.001",
+        "citations": 45,
+        "type": "journal"
+      },
+      {
+        "id": 5,
+        "title": "Efficient Natural Language Processing in Low-Resource Environments",
+        "authors": ["Emily Brown", "David Wilson"],
+        "date": "2023-10-15",
+        "venue": "International Conference on Computational Linguistics",
+        "abstract": "A novel approach to NLP that requires minimal computational resources while maintaining high accuracy in language understanding tasks.",
+        "keywords": ["NLP", "low-resource computing", "efficiency"],
+        "doi": "10.5678/iccl.2023.002",
+        "citations": 23,
+        "type": "conference"
+      },
+      {
+        "id": 6,
+        "title": "Sustainable AI: Energy-Efficient Machine Learning Architectures",
+        "authors": ["Alex Martinez", "Lisa Wang", "Robert Taylor"],
+        "date": "2023-09-01",
+        "venue": "Sustainable Computing Journal",
+        "abstract": "This research introduces new machine learning architectures designed to minimize energy consumption while maintaining high performance.",
+        "keywords": ["sustainable AI", "energy efficiency", "green computing"],
+        "doi": "10.9012/sc.2023.003",
+        "citations": 31,
+        "type": "journal"
+      }
+  ]
+}
