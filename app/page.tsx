@@ -58,7 +58,7 @@ export default function Home() {
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/60 to-transparent" />
         <div className="absolute inset-x-0 bottom-8 text-center text-white">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">LEO Lab</h1>
-          <p className="text-xl md:text-2xl">Laboratory for Economic Behavior in Organizations</p>
+          <p className="text-xl md:text-2xl">Lab for Economic Behaviour in Organizations</p>
         </div>
         <button
           onClick={() => setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}
