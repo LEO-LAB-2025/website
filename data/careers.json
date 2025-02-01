@@ -1,0 +1,64 @@
+{
+  "positions": [
+    {
+      "id": 1,
+      "title": "Research Associate - Labour Economics",
+      "type": "Full-time",
+      "location": "Plaksha University, India",
+      "deadline": "2024-03-30",
+      "description": "Join our team as a Research Associate focusing on labour economics and organizational behavior studies.",
+      "responsibilities": [
+        "Conduct quantitative research on labour market dynamics",
+        "Analyze economic data using statistical software",
+        "Assist in preparing research papers and reports",
+        "Collaborate with faculty members on ongoing projects"
+      ],
+      "requirements": [
+        "Master's degree in Economics or related field",
+        "Strong background in econometrics and statistical analysis",
+        "Proficiency in R, Python, or similar statistical software",
+        "Excellent analytical and writing skills"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Postdoctoral Fellow - Behavioral Economics",
+      "type": "Full-time",
+      "location": "Plaksha University, India",
+      "deadline": "2024-04-15",
+      "description": "We're seeking a Postdoctoral Fellow to conduct research in behavioral economics and decision-making.",
+      "responsibilities": [
+        "Design and conduct behavioral experiments",
+        "Develop research proposals and secure funding",
+        "Publish research in peer-reviewed journals",
+        "Mentor graduate students"
+      ],
+      "requirements": [
+        "PhD in Economics, Psychology, or related field",
+        "Experience in experimental design and analysis",
+        "Strong publication record",
+        "Excellent project management skills"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Data Scientist - Economic Research",
+      "type": "Full-time",
+      "location": "Plaksha University, India",
+      "deadline": "2024-03-15",
+      "description": "Looking for a Data Scientist to support our research initiatives in economic behavior and decision-making.",
+      "responsibilities": [
+        "Develop machine learning models for economic analysis",
+        "Process and analyze large-scale economic datasets",
+        "Create data visualization tools and dashboards",
+        "Collaborate with researchers on data-driven projects"
+      ],
+      "requirements": [
+        "Master's or PhD in Data Science, Computer Science, or related field",
+        "Strong programming skills in Python and R",
+        "Experience with machine learning and statistical modeling",
+        "Knowledge of economic research methods"
+      ]
+    }
+  ]
+}

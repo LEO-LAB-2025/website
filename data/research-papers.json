@@ -1,0 +1,40 @@
+{
+  "conferencePapers": [
+    {
+      "id": 1,
+      "title": "Impact of Remote Work on Organizational Productivity",
+      "authors": ["Dr. Prakarsh Singh", "Sarah Chen"],
+      "conference": "International Conference on Organizational Behavior 2023",
+      "location": "Singapore",
+      "date": "2023-09-15",
+      "abstract": "This study examines the effects of remote work arrangements on organizational productivity and employee satisfaction in post-pandemic scenarios."
+    },
+    {
+      "id": 2,
+      "title": "Behavioral Economics in Digital Marketplaces",
+      "authors": ["Dr. Prakarsh Singh", "Michael Zhang"],
+      "conference": "Asian Economic Association Conference 2023",
+      "location": "Tokyo, Japan",
+      "date": "2023-11-20",
+      "abstract": "Analysis of consumer behavior patterns in digital marketplaces and their implications for platform economics."
+    }
+  ],
+  "fundingProjects": [
+    {
+      "id": 1,
+      "title": "AI-Driven Decision Making in Organizations",
+      "description": "Research on the integration of AI systems in organizational decision-making processes and their impact on efficiency and accuracy.",
+      "fundingNeeded": "$75,000",
+      "duration": "18 months",
+      "principalInvestigator": "Dr. Prakarsh Singh"
+    },
+    {
+      "id": 2,
+      "title": "Sustainable Economics in Emerging Markets",
+      "description": "Study of sustainable economic practices in developing economies and their long-term impact on environmental conservation.",
+      "fundingNeeded": "$120,000",
+      "duration": "24 months",
+      "principalInvestigator": "Dr. Prakarsh Singh"
+    }
+  ]
+}

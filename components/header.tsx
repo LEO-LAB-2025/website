@@ -12,7 +12,9 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Research", path: "/research" },
-  { name: "Workshops", path: "/workshop" }
+  { name: "Workshops", path: "/workshop" },
+  { name: "Courses", path: "/courses" },
+  { name: "Careers", path: "/careers" }
 ];
 
 export function Header() {
