@@ -29,7 +29,7 @@ export default function CareersPage() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredPositions.map((position) => (
-            <Card key={position.id} className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+            <Card key={position.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="space-y-6">
                   <div>

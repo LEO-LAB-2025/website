@@ -14,14 +14,26 @@ export default function AboutPage() {
         <section className="flex justify-center gap-12 items-center">
           <div className="relative w-48 h-48">
             {/* Placeholder for LEO Lab logo */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded-lg">
-              <p className="text-xl font-bold text-leo">LEO Lab</p>
+            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-black">
+              <Image 
+                src="/leo.png"
+                alt="LEO Lab Logo"
+                width={192}
+                height={192}
+                className="object-contain"
+              />
             </div>
           </div>
           <div className="relative w-48 h-48">
             {/* Placeholder for Plaksha University logo */}
-            <div className="w-full h-full flex items-center justify-center bg-gray-100 rounded-lg">
-              <p className="text-xl font-bold text-leo">Plaksha University</p>
+            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-black">
+              <Image 
+                src="/pu.png"
+                alt="Plaksha Logo"
+                width={192}
+                height={192}
+                className="object-contain"
+              />
             </div>
           </div>
         </section>
@@ -33,7 +45,7 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">About LEO Lab</h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
               <div className="space-y-4 text-lg">
                 <p>
@@ -59,7 +71,7 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">About Plaksha University</h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
               <div className="space-y-4 text-lg">
                 <p>
@@ -89,19 +101,19 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Our Affiliates</h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Placeholder for affiliates - can be populated with actual data later */}
-                <div className="p-4 bg-white rounded-lg shadow-sm">
+                <div className="p-4 bg-white rounded-lg shadow-sm border-black border-2">
                   <h3 className="text-xl font-semibold mb-2">Research Partners</h3>
                   <p className="text-gray-600">Leading academic institutions and research centers</p>
                 </div>
-                <div className="p-4 bg-white rounded-lg shadow-sm">
+                <div className="p-4 bg-white rounded-lg shadow-sm border-black border-2">
                   <h3 className="text-xl font-semibold mb-2">Industry Collaborators</h3>
                   <p className="text-gray-600">Organizations partnering in research initiatives</p>
                 </div>
-                <div className="p-4 bg-white rounded-lg shadow-sm">
+                <div className="p-4 bg-white rounded-lg shadow-sm border-black border-2">
                   <h3 className="text-xl font-semibold mb-2">Academic Network</h3>
                   <p className="text-gray-600">Global academic partnerships and collaborations</p>
                 </div>

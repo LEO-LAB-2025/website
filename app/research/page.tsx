@@ -42,7 +42,7 @@ const ResearchPage: NextPage = () => {
 
           <div className="grid gap-8 md:grid-cols-2">
             {researchPapers.conferencePapers.map((paper) => (
-              <Card key={paper.id} className="hover:shadow-lg transition-shadow overflow-hidden">
+              <Card key={paper.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
                     src="/1.jpeg"
@@ -52,8 +52,8 @@ const ResearchPage: NextPage = () => {
                     style={{ objectFit: 'cover' }}
                   />
                 </div>
-                <CardContent className="p-6 space-y-4">
-                  <div className="space-y-2">
+                <CardContent className="p-6 space-y-4 ">
+                  <div className="space-y-2 ">
                     <h3 className="text-xl font-semibold">{paper.title}</h3>
                     <p className="text-sm text-gray-600">
                       {paper.authors.join(', ')}
@@ -88,7 +88,7 @@ const ResearchPage: NextPage = () => {
 
           <div className="grid gap-8 md:grid-cols-2">
             {researchPapers.fundingProjects.map((project) => (
-              <Card key={project.id} className="hover:shadow-lg transition-shadow">
+              <Card key={project.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 space-y-4">
                   <div className="space-y-2">
                     <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -118,7 +118,7 @@ const ResearchPage: NextPage = () => {
 
         {/* Contact Form */}
         <section className="max-w-2xl mx-auto">
-          <Card>
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-6">
               <div className="mb-6 text-center space-y-2">
                 <h3 className="text-xl font-semibold">Express Interest in Project Funding</h3>

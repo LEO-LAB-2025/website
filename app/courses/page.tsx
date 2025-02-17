@@ -45,7 +45,7 @@ export default function CoursesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingCourses.map((course) => (
-              <Card key={course.id} className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+              <Card key={course.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
                 <CardContent className="p-8">
                   <div className="space-y-4">
                     <h3 className="text-xl font-semibold">{course.title}</h3>
@@ -74,7 +74,7 @@ export default function CoursesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {previousCourses.map((course) => (
-              <Card key={course.id} className="hover:shadow-lg transition-shadow">
+              <Card key={course.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <h3 className="text-lg font-semibold">{course.title}</h3>

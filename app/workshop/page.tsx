@@ -41,7 +41,7 @@ const WorkshopPage: NextPage = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">Workshops</h1>
 
         {/* Call for Papers Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">The LEO Economics Conference</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">

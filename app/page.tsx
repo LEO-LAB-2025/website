@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-basewhite min-h-screen">
+    <div className="bg-gray-light min-h-screen">
       {/* Full-width Carousel */}
       <div className="relative w-full h-[60vh] mb-12">
         {carouselImages.map((image, index) => (
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
         <button
           onClick={() => setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-leo/30 hover:bg-leo/50 text-white p-2 rounded-full transition-colors"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
@@ -77,9 +77,9 @@ export default function Home() {
       <div className="container mx-auto px-4 lg:px-8">
         {/* About LEO Lab */}
         <section className="mb-16 md:mb-24">
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">About LEO Lab</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-leo-dark">About LEO Lab</h2>
               <div className="space-y-4 text-lg">
                 <p>
                   The newly established lab at Plaksha University, LEO (Lab for Economic Behavior in Organizations), 
@@ -102,10 +102,10 @@ export default function Home() {
         <section className="mb-16 md:mb-24">
           <div className="flex items-center gap-3 md:gap-4 mb-8">
             <BookOpen className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Upcoming Workshop</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-leo-dark">Upcoming Workshop</h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
               <h3 className="text-2xl md:text-3xl font-bold mb-6">The LEO Economics Conference</h3>
               <div className="grid md:grid-cols-2 gap-8">
@@ -144,14 +144,15 @@ export default function Home() {
           </Card>
         </section>
 
+        {/* Update the Research Highlights section similarly */}
         <section className="mb-16 md:mb-24">
           <div className="flex items-center gap-3 md:gap-4 mb-8">
             <ScrollText className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Research Highlights</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-leo-dark">Research Highlights</h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+            <Card className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-4">Latest Publications</h3>
                 <p className="text-gray-700 mb-6">Explore our recent research publications in personnel economics, behavioral science, and organizational development.</p>
@@ -161,7 +162,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-50 to-blue-100 hover:shadow-lg transition-shadow">
+            <Card className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold mb-4">Research Areas</h3>
                 <p className="text-gray-700 mb-6">Our research focuses on the intersection of economics, data science, and organizational behavior to improve hiring decisions and workplace productivity.</p>
