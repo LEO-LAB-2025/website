@@ -41,28 +41,41 @@ const WorkshopPage: NextPage = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">Workshops</h1>
 
         {/* Call for Papers Section */}
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">The LEO Economics Conference</h2>
           
           <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="w-full md:w-2/3 space-y-6">
-              <div className="space-y-4">
-                <div>
-                  <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
-                  <p className="text-lg">Plaksha University</p>
+              <div className="flex justify-between items-start space-x-8">
+                <div className="space-y-4">
+                  <div className='flex flex-col'>
+                    <div className='flex-col'>
+                      <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
+                      <p className="text-lg">Plaksha University</p>
+                    </div>
+                    <p className="text-gray-700">
+                      Selected participants will present their work to senior faculty members from India's leading academic institutions.
+                      Open to Faculty, Post-docs and PhD Candidates.
+                    </p>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <p className="font-medium">Important Dates:</p>
+                    <ul className="list-disc list-inside text-gray-700 space-y-1">
+                      <li>Submission Deadline: February 28, 2025</li>
+                      <li>Notification of Acceptance: March 15, 2025</li>
+                    </ul>
+                  </div>
                 </div>
-                <p className="text-gray-700">
-                  Selected participants will present their work to senior faculty members from India's leading academic institutions.
-                  Open to Faculty, Post-docs and PhD Candidates.
-                </p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="font-medium">Important Dates:</p>
-                <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Submission Deadline: February 28, 2025</li>
-                  <li>Notification of Acceptance: March 15, 2025</li>
-                </ul>
+                
+                <div className="flex-shrink-0">
+                  <Image
+                    src='/qr.png'
+                    alt='qr code'
+                    width={200}
+                    height={200}
+                  />
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -78,6 +91,7 @@ const WorkshopPage: NextPage = () => {
             </div>
           </div>
         </div>
+
 
         {/* Previous Workshop Section */}
         <div className="space-y-8">
