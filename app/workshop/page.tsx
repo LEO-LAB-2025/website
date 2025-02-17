@@ -41,19 +41,19 @@ const WorkshopPage: NextPage = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">Workshops</h1>
 
         {/* Call for Papers Section */}
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 md:p-12 space-y-6 mb-16">
+        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 sm:p-8 md:p-12 space-y-6 mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">The LEO Economics Conference</h2>
           
-          <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-            <div className="w-full md:w-2/3 space-y-6">
-              <div className="flex justify-between items-start space-x-8">
-                <div className="space-y-4">
+          <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
+            <div className="w-full space-y-6">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+                <div className="space-y-4 w-full md:w-2/3">
                   <div className='flex flex-col'>
                     <div className='flex-col'>
                       <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
                       <p className="text-lg">Plaksha University</p>
                     </div>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 mt-4">
                       Selected participants will present their work to senior faculty members from India's leading academic institutions.
                       Open to Faculty, Post-docs and PhD Candidates.
                     </p>
@@ -68,19 +68,20 @@ const WorkshopPage: NextPage = () => {
                   </div>
                 </div>
                 
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 w-full md:w-auto flex justify-center">
                   <Image
                     src='/qr.png'
                     alt='qr code'
-                    width={200}
-                    height={200}
+                    width={150}
+                    height={150}
+                    className="md:w-[200px] md:h-[200px]"
                   />
                 </div>
               </div>
 
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold">Topics Include:</h4>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                   {workshopTopics.map((topic, index) => (
                     <div key={index} className="bg-white/60 p-2 rounded-md text-sm">
                       {topic}
@@ -92,28 +93,26 @@ const WorkshopPage: NextPage = () => {
           </div>
         </div>
 
-
         {/* Previous Workshop Section */}
         <div className="space-y-8">
           <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">Our Previous Workshop</h2>
           
           {/* Photo Carousel */}
           <div className="relative w-full aspect-video max-w-4xl mx-auto mb-8">
-            <div className="absolute inset-0 flex items-center justify-between z-10 px-4">
+            <div className="absolute inset-0 flex items-center justify-between z-10 px-2 md:px-4">
               <button
                 onClick={prevSlide}
-                className="bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
+                className="bg-black/30 hover:bg-black/50 text-white p-1 md:p-2 rounded-full transition-colors"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
               </button>
               <button
                 onClick={nextSlide}
-                className="bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors"
+                className="bg-black/30 hover:bg-black/50 text-white p-1 md:p-2 rounded-full transition-colors"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
               </button>
             </div>
-            
             <div className="relative h-full overflow-hidden rounded-xl">
               {carouselImages.map((image, index) => (
                 <div
@@ -130,15 +129,16 @@ const WorkshopPage: NextPage = () => {
                 </div>
               ))}
             </div>
+            
+            
           </div>
 
           {/* Workshop Details */}
-          <div className="max-w-4xl mx-auto space-y-6 bg-white rounded-xl p-8 shadow-sm">
+          <div className="max-w-4xl mx-auto space-y-6 bg-white rounded-xl p-4 sm:p-6 md:p-8 shadow-sm">
             <h3 className="text-xl font-semibold">LEO Lab Workshop Series 2023</h3>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
                   <h4 className="font-medium mb-2">Event Details</h4>
                   <div className="text-gray-700 space-y-2">
                     <p>Date: December 2023</p>
@@ -177,7 +177,6 @@ const WorkshopPage: NextPage = () => {
                     identifying opportunities for future collaboration.
                   </p>
                 </div>
-              </div>
             </div>
           </div>
         </div>
