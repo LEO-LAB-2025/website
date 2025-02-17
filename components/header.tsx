@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -11,8 +12,11 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
   { name: "Research", path: "/research" },
-  { name: "Workshops", path: "/workshop" }
+  { name: "Workshops", path: "/workshop" },
+  { name: "Courses", path: "/courses" },
+  { name: "Careers", path: "/careers" }
 ];
 
 export function Header() {
@@ -22,7 +26,19 @@ export function Header() {
     <header className="fixed top-0 w-full bg-basewhite border-b border-gray-200 z-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="text-leo text-2xl md:text-3xl font-extrabold">LEO</Link>
+          <Link href="/" className="font-extrabold">
+            <Image
+              src="/leo.png"
+              alt="LEO Lab Logo"
+              width={130}
+              height={60}
+              className="p-2"
+              quality={100}
+              priority
+            />
+          </Link>
+
+        
 
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList className="flex items-center justify-center space-x-6 lg:space-x-8">

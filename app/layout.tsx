@@ -1,13 +1,9 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
+import { Open_Sans } from "next/font/google";
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import './globals.css';
 
-const geistSans = GeistSans;
-const geistMono = GeistMono;
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'L.E.O. Lab',
@@ -21,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
+      <body className={`${openSans.className} antialiased min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-grow pt-16 md:pt-20">
           {children}
