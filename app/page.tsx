@@ -79,7 +79,7 @@ export default function Home() {
         <section className="mb-16 md:mb-24">
           <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-leo-dark">About LEO Lab</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-leo">About LEO Lab</h2>
               <div className="space-y-4 text-lg">
                 <p>
                   The newly established lab at Plaksha University, LEO (Lab for Economic Behavior in Organizations), 
@@ -90,10 +90,11 @@ export default function Home() {
                   LEO's vision is to innovate in and learn from the latest scientific advances in personnel, behavioral, 
                   experimental and organizational economics, offering insights to address grand challenges.
                 </p>
-                <p>
-                  Initiated by Dr. Prakarsh Singh, Chair Professor of Economics, Plaksha University, LEO brings together 
-                  researchers in various fields including labour, environment, and development economics.
-                </p>
+                
+                <Link href="/about" className="mt-6 block">
+                  <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">Learn More</Button>
+                </Link>
+                
               </div>
             </CardContent>
           </Card>
@@ -125,9 +126,10 @@ export default function Home() {
                       <li>Notification of Acceptance: March 15, 2025</li>
                     </ul>
                   </div>
-                  <Link href="/workshop">
-                    <Button className="bg-leo text-white hover:bg-leo/90">Learn More</Button>
-                  </Link>
+                  
+                  <Link href="/workshop" className='mt-6 block'>
+                  <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">Learn More</Button>
+                </Link>
                 </div>
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold">Topics Include:</h4>
