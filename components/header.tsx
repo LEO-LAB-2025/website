@@ -23,18 +23,18 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full bg-basewhite border-b border-gray-200 z-50">
+    <header className="fixed top-0 w-full bg-leo border-b border-black z-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="relative flex items-center h-16 md:h-20">
           {/* Logo */}
           <div className="flex-1 flex justify-center md:justify-start">
-            <Link href="/" className="font-extrabold">
+            <Link href="/" className="font-extrabold bg-white inline-block">
               <Image
                 src="/leo.png"
                 alt="LEO Lab Logo"
                 width={130}
-                height={60}
-                className="p-2 scale-75 md:scale-100"
+                height={20}
+                className="p-2 scale-75 md:scale-100 w-auto md:h-[80px] h-[65px]"
                 quality={100}
                 priority
               />
@@ -61,7 +61,7 @@ export function Header() {
               {navItems.map((item) => (
                 <NavigationMenuItem key={item.name}>
                   <Link href={item.path} passHref legacyBehavior>
-                    <NavigationMenuLink className="px-3 py-2 text-sm lg:text-base text-graygray-700 hover:text-leo transition-colors font-medium">
+                    <NavigationMenuLink className="px-3 py-2 text-sm lg:text-base text-white hover:text-black transition-colors font-medium">
                       {item.name}
                     </NavigationMenuLink>
                   </Link>

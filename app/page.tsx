@@ -7,10 +7,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const carouselImages = [
-  { src: "/1.jpeg", alt: "LEO Lab Research Activities 1" },
+  { src: "/h4.jpg", alt: "LEO Lab Research Activities 1" },
   { src: "/2.jpeg", alt: "LEO Lab Workshop Session" },
-  { src: "/3.jpeg", alt: "LEO Lab Team" },
-  { src: "/4.png", alt: "LEO Lab Team" }
+  { src: "/h1.jpg", alt: "LEO Lab Team" },
+  { src: "/h2.jpg", alt: "LEO Lab Team" },
+  { src: "/h3.jpg", alt: "LEO Lab Team" }
 
 ];
 
@@ -108,7 +109,7 @@ export default function Home() {
 
           <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
             <CardContent className="p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6">The LEO Economics Conference</h3>
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-leo">The LEO Economics Conference</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   <div>
@@ -156,7 +157,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold mb-4">Latest Publications</h3>
+                <h3 className="text-xl font-semibold mb-4 text-leo">Latest Publications</h3>
                 <p className="text-gray-700 mb-6">Explore our recent research publications in personnel economics, behavioral science, and organizational development.</p>
                 <Link href="/research">
                   <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">View Publications</Button>
@@ -166,7 +167,7 @@ export default function Home() {
 
             <Card className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
-                <h3 className="text-xl font-semibold mb-4">Research Areas</h3>
+                <h3 className="text-xl font-semibold mb-4 text-leo">Research Areas</h3>
                 <p className="text-gray-700 mb-6">Our research focuses on the intersection of economics, data science, and organizational behavior to improve hiring decisions and workplace productivity.</p>
                 <Link href="/research">
                   <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">Learn More</Button>

@@ -16,7 +16,7 @@ export default function CareersPage() {
     <div className="container mx-auto px-4 lg:px-8 py-8">
       <div className="space-y-12">
         <div className="text-center space-y-4">
-          <h1 className="text-3xl md:text-4xl font-bold">Careers at LEO Lab</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-leo">Careers at LEO Lab</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Join our team of researchers and contribute to groundbreaking work in economic behavior and organizational studies.
           </p>

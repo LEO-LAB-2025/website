@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 lg:px-8 py-8">
       <div className="space-y-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">About Us</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-leo">About Us</h1>
 
         {/* Logos Section */}
         <section className="flex justify-center gap-12 items-center">
