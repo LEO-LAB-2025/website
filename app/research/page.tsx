@@ -45,7 +45,7 @@ const ResearchPage: NextPage = () => {
               <Card key={paper.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow overflow-hidden">
                 <div className="relative h-48 w-full">
                   <Image
-                    src="/1.jpeg"
+                    src="/2.jpeg"
                     alt={paper.title}
                     fill
                     className="object-cover"

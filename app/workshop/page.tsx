@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const WorkshopPage: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  // Add this useEffect for auto-sliding
+ 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
