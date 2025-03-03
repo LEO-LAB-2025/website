@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ScrollText, Presentation, Coins } from 'lucide-react';
+import { ScrollText, Presentation, Coins, BookOpen, FileText } from 'lucide-react';
 import researchPapers from '@/data/research-papers.json';
 
 const ResearchPage: NextPage = () => {
@@ -69,6 +69,62 @@ const ResearchPage: NextPage = () => {
                     </p>
                     <p className="text-sm text-gray-700">
                       <span className="font-medium">Date:</span> {new Date(paper.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-gray-700">{paper.abstract}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Working Papers Section */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-3 md:gap-4 mb-8">
+            <BookOpen className="h-8 w-8 md:h-12 md:w-12 text-leo" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Working Papers</h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {researchPapers.workingPapers.map((paper) => (
+              <Card key={paper.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold">{paper.title}</h3>
+                    <p className="text-sm text-gray-600">
+                      {paper.authors.join(', ')}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      <span className="font-medium">Year:</span> {paper.year}
+                    </p>
+                  </div>
+
+                  <p className="text-sm text-gray-700">{paper.abstract}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Works in Progress Section */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-3 md:gap-4 mb-8">
+            <FileText className="h-8 w-8 md:h-12 md:w-12 text-leo" />
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Works in Progress</h2>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {researchPapers.worksInProgress.map((paper) => (
+              <Card key={paper.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="text-xl font-semibold">{paper.title}</h3>
+                    <p className="text-sm text-gray-600">
+                      {paper.authors.join(', ')}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      <span className="font-medium">Expected Year:</span> {paper.year}
                     </p>
                   </div>
 
