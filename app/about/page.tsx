@@ -14,7 +14,7 @@ export default function AboutPage() {
         <section className="flex justify-center gap-12 items-center">
           <div className="relative w-48 h-48">
             {/* Placeholder for LEO Lab logo */}
-            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-black">
+            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
                 src="/leo.png"
                 alt="LEO Lab Logo"
@@ -26,7 +26,7 @@ export default function AboutPage() {
           </div>
           <div className="relative w-48 h-48">
             {/* Placeholder for Plaksha University logo */}
-            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-black">
+            <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
                 src="/pu.png"
                 alt="Plaksha Logo"

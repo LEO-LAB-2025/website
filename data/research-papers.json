@@ -1,23 +1,6 @@
 {
   "conferencePapers": [
-    {
-      "id": 1,
-      "title": "Impact of Remote Work on Organizational Productivity",
-      "authors": ["Dr. Prakarsh Singh", "Sarah Chen"],
-      "conference": "International Conference on Organizational Behavior 2023",
-      "location": "Singapore",
-      "date": "2023-09-15",
-      "abstract": "This study examines the effects of remote work arrangements on organizational productivity and employee satisfaction in post-pandemic scenarios."
-    },
-    {
-      "id": 2,
-      "title": "Behavioral Economics in Digital Marketplaces",
-      "authors": ["Dr. Prakarsh Singh", "Michael Zhang"],
-      "conference": "Asian Economic Association Conference 2023",
-      "location": "Tokyo, Japan",
-      "date": "2023-11-20",
-      "abstract": "Analysis of consumer behavior patterns in digital marketplaces and their implications for platform economics."
-    }
+ 
   ],
   "workingPapers": [
     {
