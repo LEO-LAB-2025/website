@@ -4,34 +4,55 @@
   ],
   "workingPapers": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Are we doing more harm than good? Hypothetical bias correction techniques in potentially consequential survey settings",
       "authors": ["Vasudha Chopra", "Christian A. Vossler"],
       "year": "2024",
       "abstract": "Researchers deploying stated preference surveys to elicit monetary valuations for public goods commonly use techniques devised to reduce bias in hypothetical choice settings. This practice is conceptually at odds with accumulated evidence that most survey respondents instead perceive that their decisions have economic consequences (i.e., affect their future welfare). We examine three bias reduction procedures in both hypothetical choice and incentive compatible, real payment settings: cheap talk, solemn oath, and certainty adjustment. While we find that the oath reduces willingness to pay (WTP) in a hypothetical setting, the oath instead increases WTP by over 30% in a consequential setting. Cheap talk does not alter mean WTP in a consequential setting but leads to a stark difference in WTP across sexes. Applying the common rules for ex post adjustment of choices based on stated response certainty leads to significant and large decreases in WTP estimates for both hypothetical and consequential cases. Our results suggest that survey researchers should make use of screening questions to better target hypothetical bias reduction techniques to only those prone to bias."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "What the Budge-t? Exploring the role of mental accounting on environmental valuation",
       "authors": ["Vasudha Chopra", "Srijita Ghosh"],
       "year": "2024",
       "abstract": "Mental accounting describes how individuals categorize money into separate \"accounts\" based on its origin, intended use, or time frame. This psychological framework challenges the assumption of money's fungibility and influences spending decisions. In the context of stated preference surveys, which estimate willingness to pay (WTP) for non-market goods, mental accounting may significantly shape valuation. This study examines whether activating different mental accounts affects consumer demand for a food waste management program. To explore the role of mental accounting in shaping WTP, we conducted a two-part study at Ashoka University: a baseline survey assessing awareness and attitudes, followed by a lab experiment where WTP is elicited across four treatments—a control (no mental account evoked) and three treatments with separate mental accounts being evoked namely: charitable donations, meals and dining, and recreation budgets. Results indicate that evoking the recreation and dining budget leads to the highest elicited WTP, suggesting that value estimates depend on the mental account evoked. Beyond WTP, we incorporate risk preferences, prosocial behavior, and demographic factors to disentangle the mechanisms driving mental accounting effects. Our findings highlight the importance of survey framing in policy design, offering insights into how budgeting tendencies shape consumer demand and improving the reliability of demand estimates for benefit-cost analyses."
+    },
+    {
+      "id": "3",
+      "title": "The Interplay between Layoffs and Compensation",
+      "authors": ["Prakarsh Singh", "Anshika Arora"],
+      "year": "2024",
+      "abstract": "The relationship between layoffs and employee compensation has gained significant attention in organizational economics, particularly following global economic disruptions like the COVID-19 pandemic. This study examines how layoffs impact the compensation of remaining employees. Our analysis reveals a positive correlation between the number of layoffs within a company and the total yearly compensation of retained employees in the following quarter."
+    },
+    {
+      "id": "4",
+      "title": "Permission to Work in the Service Sector",
+      "authors": ["Prakarsh Singh", "Sarvnipun Kaur", "Anshika Arora"],
+      "year": "2024",
+      "abstract": "This essay extends the examination of regulatory incentives to gender-specific employment out-comes, focusing on how changes in legal restrictions can influence women's access to formal employment. In many developing countries, cultural or legal constraints, particularly around night shifts, limit women's participation in certain jobs. However, recent amendments in specific Indian states now permit women to work night shifts, creating a new pathway for women to enter salaried employment that was previously unavailable. Using household survey data, this essay measures whether women in states that enacted this amendment experience a greater likelihood of securing salaried employment compared to those in states with-out such changes. This study provides empirical evidence on the extent to which policy-driven incentives affect women's labor market participation and highlights the broader implications of regulatory adjustments on gender equality in formal employment opportunities."
     }
   ],
   "worksInProgress": [
     {
-      "id": 1,
+      "id": "1",
       "title": "The Role of Risk and Power in Compromise: A Social Preferences Perspective",
       "authors": ["Saumya Deojain","Vasudha Chopra"],
       "year": "2025",
       "abstract": "In policy decision-making, interest groups often compromise to reduce the risk of an unfavorable policy being implemented. However, compromises involve varying degrees of power (aka influence) over the final policy, shaping an individual's willingness to negotiate with other groups. Power determines how much weight an individual's preferred policy has in shaping the final compromise. If an agent perceives low power in the compromise, they may opt to abandon the compromise and accept the risk of a worse policy being implemented. This suggests that willingness to compromise depends not only on risk aversion but also on perceived power in the compromise process. We propose an experiment where individuals with conflicting policy preferences decide whether to compromise under equal vs. unequal power. If both agree to compromise, a compromise policy is implemented. If even one agent refuses, the alliance dissolves, and each risks their opponent's policy being enacted. Our pilot results reject the hypothesis that unequal power does not affect compromise. Unequal power increases overall instances of compromise by 10.2%, as those with low power choose to compromise more than those with high power opt to fragment. Risk aversion increases compromise by 17%, and risk-averse individuals are 35% more likely to compromise when their opponent holds greater power. Additionally, social preferences—altruism, envy, and inequality aversion—interact with risk aversion, leading to differences in compromise behavior. By linking risk, power, and social preferences, this study contributes to the literature on risk-taking and compromise, offering insights into how behavioral mechanisms and risk attitudes shape willingness to compromise in policy settings."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Colourism, Confidence and Productivity: An Experimental evidence",
       "authors": ["Nishat Anjum" ,"Sujoy Chakravarty","Vasudha Chopra"],
       "year": "2025",
-      "abstract": "This study examines how self-perceived skin color influences productivity and cognitive performance in real-effort tasks, while exploring confidence as a potential mechanism driving this effect. We further analyze intergroup differences (gender, caste, parental income) following skin color salience induction. Building on Anjum et al. (2025), who demonstrated that exposure to popular media images—presented as social cues linking skin color to ability—creates a stereotype 'lift' (lighter-skinned individuals outperform counterparts in control conditions without such cues), however, their finding disproves the existence of a corresponding stereotype threat. Contrary to expectations, they find no evidence that darker-skinned individuals perform worse when skin-color-ability associations are emphasized. In this novel set of experiments, we want to understand if skin colour impacts (aggravates or mediates) individuals’ productivity rating. We are interested in capturing this effect across gender to understand how men and women perceive skin colour differentially and potentially impacted by them. Our findings may potentially contribute to understanding how gendered societal norms shape the psychological and behavioral consequences of skin color salience along with other inter-group differences."
+      "abstract": "This study examines how self-perceived skin color influences productivity and cognitive performance in real-effort tasks, while exploring confidence as a potential mechanism driving this effect. We further analyze intergroup differences (gender, caste, parental income) following skin color salience induction. Building on Anjum et al. (2025), who demonstrated that exposure to popular media images—presented as social cues linking skin color to ability—creates a stereotype 'lift' (lighter-skinned individuals outperform counterparts in control conditions without such cues), however, their finding disproves the existence of a corresponding stereotype threat. Contrary to expectations, they find no evidence that darker-skinned individuals perform worse when skin-color-ability associations are emphasized. In this novel set of experiments, we want to understand if skin colour impacts (aggravates or mediates) individuals' productivity rating. We are interested in capturing this effect across gender to understand how men and women perceive skin colour differentially and potentially impacted by them. Our findings may potentially contribute to understanding how gendered societal norms shape the psychological and behavioral consequences of skin color salience along with other inter-group differences."
+    },
+    {
+      "id": "3",
+      "title": "Gender, Stakes and Effort in Wimbledon Tournaments",
+      "authors": ["Prakarsh Singh", "Sarvnipun Kaur"],
+      "year": "2025",
+      "abstract": "In 2007, Wimbledon made a historic move by introducing pay equality, awarding the same prize money to male and female players for the first time. We exploit the introduction of equal prize money in Wimbledon in 2007 as a natural experiment to estimate the effect of pay parity on player effort. We then estimate the Two Way Fixed Effects Difference in Differences (DiD) estimates to understand the effect of pay parity on outcomes for men and women after the treatment."
     }
   ],
   "fundingProjects": [
