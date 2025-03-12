@@ -1,17 +1,10 @@
 'use client';
-import { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Briefcase } from "lucide-react";
 import careers from "@/data/careers.json";
 
 export default function CareersPage() {
-  const [selectedType, setSelectedType] = useState<string>('all');
-
-  const filteredPositions = selectedType === 'all'
-    ? careers.positions
-    : careers.positions.filter(position => position.type === selectedType);
-
   return (
     <div className="container mx-auto px-4 lg:px-8 py-8">
       <div className="space-y-12">
@@ -27,8 +20,8 @@ export default function CareersPage() {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Open Positions</h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredPositions.map((position) => (
+        <div className="grid gap-6">
+          {careers.positions.map((position) => (
             <Card key={position.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="space-y-6">
@@ -59,9 +52,12 @@ export default function CareersPage() {
 
                   <div className="space-y-2">
                     <p className="text-sm text-gray-600">
-                      Application Deadline: {new Date(position.deadline).toLocaleDateString()}
+                      Join Plaksha University in our mission to revolutionize education by bringing in the best and brightest minds. If you're driven, detail-oriented, and passionate, we want to hear from you.
                     </p>
-                    <Button className="w-full bg-leo text-white hover:bg-leo/90">
+                    <Button 
+                      className="w-full bg-leo text-white hover:bg-leo/90"
+                      onClick={() => window.open(position.applicationLink, '_blank')}
+                    >
                       Apply Now
                     </Button>
                   </div>
