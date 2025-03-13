@@ -78,107 +78,6 @@ const sponsorshipDetails = [
   },
 ];
 
-// PaperCarousel component for displaying papers with navigation
-const PaperCarousel = ({ papers, imageUrl }: { papers: Paper[], imageUrl?: string }) => {
-  const [currentPage, setCurrentPage] = useState(0);
-  const papersPerPage = 2; // Show only 2 papers at a time on desktop
-  const totalPages = Math.ceil(papers.length / papersPerPage);
-
-  const goToNextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
-
-  const goToPrevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
-
-  const currentPapers = papers.slice(
-    currentPage * papersPerPage,
-    (currentPage + 1) * papersPerPage
-  );
-
-  return (
-    <div className="relative">
-      <div className="grid gap-8 md:grid-cols-2">
-        {currentPapers.map((paper) => (
-          <Card key={paper.id} className="bg-gradient-to-br from-gray-50 to-gray-100 hover:shadow-lg transition-shadow overflow-hidden">
-            {imageUrl && (
-              <div className="relative h-48 w-full">
-                <Image
-                  src={imageUrl}
-                  alt={paper.title}
-                  fill
-                  className="object-cover"
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-            )}
-            <CardContent className="p-6 space-y-4">
-              <div className="space-y-2">
-                <h3 className="text-xl font-semibold">{paper.title}</h3>
-                <p className="text-sm text-gray-600">
-                  {paper.authors.join(', ')}
-                </p>
-                {paper.conference && (
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Conference:</span> {paper.conference}
-                  </p>
-                )}
-                {paper.location && (
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Location:</span> {paper.location}
-                  </p>
-                )}
-                {paper.date && (
-                  <p className="text-sm text-gray-700">
-                    <span className="font-medium">Date:</span> {new Date(paper.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
-                  </p>
-                )}
-                {paper.year && (
-                  <p className="text-sm text-gray-600">
-                    <span className="font-medium">{paper.conference ? '' : (paper.year === '2024' ? 'Year:' : 'Expected Year:')}</span> {paper.year}
-                  </p>
-                )}
-              </div>
-              <p className="text-sm text-gray-700">{paper.abstract}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      
-      {/* Navigation controls */}
-      {totalPages > 1 && (
-        <div className="flex justify-center mt-6 gap-4">
-          <Button 
-            variant="outline" 
-            size="icon" 
-            onClick={goToPrevPage}
-            className="rounded-full h-10 w-10"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </Button>
-          <div className="flex items-center space-x-1">
-            {Array.from({ length: totalPages }).map((_, index) => (
-              <span 
-                key={index} 
-                className={`h-2 w-2 rounded-full ${currentPage === index ? 'bg-leo' : 'bg-gray-300'}`}
-              />
-            ))}
-          </div>
-          <Button 
-            variant="outline" 
-            size="icon" 
-            onClick={goToNextPage}
-            className="rounded-full h-10 w-10"
-          >
-            <ChevronRight className="h-5 w-5" />
-          </Button>
-        </div>
-      )}
-    </div>
-  );
-};
-
 const ResearchPage: NextPage = () => {
   const [sponsorFormData, setSponsorFormData] = useState({
     name: '',
@@ -240,59 +139,129 @@ const ResearchPage: NextPage = () => {
           
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-leo mb-4">Support Economic Research Excellence</h3>
-            <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-700">
+            <p className="text-lg max-w-3xl mx-auto text-gray-700">
               Join us in advancing economic research and innovation. Your sponsorship helps foster groundbreaking research and meaningful discussions at the LEO Conference.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-800">Silver Sponsor</h3>
-                <div className="text-3xl font-bold text-leo mt-2">₹4 Lakhs</div>
+          {/* Desktop Table View (hidden on mobile) */}
+          <div className="hidden md:block">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="col-span-1">
+                {/* Header */}
+                <div className="p-6 bg-white rounded-t-lg shadow-md border border-gray-200">
+                  <div className="text-center space-y-4">
+                    <h3 className="text-2xl font-bold text-gray-800">Features</h3>
+                    <div className="text-gray-500">Choose your tier</div>
+                  </div>
+                </div>
               </div>
-              <ul className="space-y-3">
-                {sponsorshipDetails
-                  .filter(detail => detail.silver)
-                  .map((detail, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700">{detail.benefit}</span>
-                    </li>
-                  ))}
-              </ul>
+
+              <div className="col-span-1">
+                {/* Header */}
+                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg shadow-md border border-gray-200">
+                  <div className="text-center space-y-4">
+                    <h3 className="text-2xl font-bold text-gray-800">Silver</h3>
+                    <div className="text-3xl font-bold text-leo">₹4 Lakhs</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-span-1">
+                {/* Header */}
+                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg shadow-md border border-gray-200">
+                  <div className="text-center space-y-4">
+                    <h3 className="text-2xl font-bold text-gray-800">Gold</h3>
+                    <div className="text-3xl font-bold text-leo">₹5 Lakhs</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow relative overflow-hidden">
-              <div className="absolute top-4 right-4">
-                <span className="bg-leo text-white px-3 py-1 rounded-full text-sm font-medium">
-                  Popular Choice
-                </span>
+            {/* Feature rows */}
+            {sponsorshipDetails.map((detail, index) => (
+              <div key={index} className="grid md:grid-cols-3 gap-8">
+                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center">
+                  <p className="text-gray-700">{detail.benefit}</p>
+                </div>
+                
+                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center justify-center">
+                  {detail.silver ? (
+                    <CheckCircle className="h-6 w-6 text-green-500" />
+                  ) : (
+                    <span className="h-6 w-6 text-gray-300">—</span>
+                  )}
+                </div>
+                
+                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center justify-center">
+                  {detail.gold ? (
+                    <CheckCircle className="h-6 w-6 text-green-500" />
+                  ) : (
+                    <span className="h-6 w-6 text-gray-300">—</span>
+                  )}
+                </div>
               </div>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-800">Gold Sponsor</h3>
-                <div className="text-3xl font-bold text-leo mt-2">₹5 Lakhs</div>
-              </div>
-              <ul className="space-y-3">
-                {sponsorshipDetails
-                  .filter(detail => detail.gold)
-                  .map((detail, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700">{detail.benefit}</span>
-                    </li>
+            ))}
+          </div>
+          
+          {/* Mobile Card View */}
+          <div className="md:hidden space-y-8">
+            {/* Silver Tier Card */}
+            <Card className="overflow-hidden border-2 border-gray-200">
+              <CardContent className="p-0">
+                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Silver Tier</h3>
+                    <div className="text-2xl font-bold text-leo">₹4 Lakhs</div>
+                  </div>
+                </div>
+                <div className="p-6 space-y-4">
+                  {sponsorshipDetails.map((detail, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      {detail.silver ? (
+                        <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                      ) : (
+                        <span className="h-5 w-5 text-gray-300 shrink-0 mt-0.5">—</span>
+                      )}
+                      <p className="text-sm text-gray-700">{detail.benefit}</p>
+                    </div>
                   ))}
-              </ul>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            {/* Gold Tier Card */}
+            <Card className="overflow-hidden border-2 border-leo">
+              <CardContent className="p-0">
+                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
+                  <div className="text-center space-y-2">
+                    <h3 className="text-xl font-bold text-gray-800">Gold Tier</h3>
+                    <div className="text-2xl font-bold text-leo">₹5 Lakhs</div>
+                  </div>
+                </div>
+                <div className="p-6 space-y-4">
+                  {sponsorshipDetails.map((detail, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      {detail.gold ? (
+                        <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
+                      ) : (
+                        <span className="h-5 w-5 text-gray-300 shrink-0 mt-0.5">—</span>
+                      )}
+                      <p className="text-sm text-gray-700">{detail.benefit}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
-          {/* Enhanced Sponsorship Form */}
-          <div className="max-w-2xl mx-auto">
+          {/* Sponsorship Form */}
+          <div className="max-w-2xl mx-auto mt-12">
             <Card className="bg-gradient-to-br from-white to-gray-50 shadow-xl">
-              <CardContent className="p-8">
-                <div className="mb-8 text-center space-y-3">
-                  <h3 className="text-2xl font-bold text-leo">Become a Sponsor</h3>
-                  <p className="text-gray-600">Fill out the form below to express your interest in sponsoring. Our team will reach out with more details.</p>
+              <CardContent className="p-6 sm:p-8">
+                <div className="mb-6 sm:mb-8 text-center space-y-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-leo">Become a Sponsor</h3>
+                  <p className="text-sm sm:text-base text-gray-600">Fill out the form below to express your interest in sponsoring. Our team will reach out with more details.</p>
                 </div>
                 {sponsorMessage.text && (
                   <div className={`mb-6 p-4 rounded-lg ${
@@ -301,9 +270,9 @@ const ResearchPage: NextPage = () => {
                     {sponsorMessage.text}
                   </div>
                 )}
-                <form onSubmit={handleSponsorSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
+                <form onSubmit={handleSponsorSubmit} className="space-y-5">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div className="space-y-1.5">
                       <label htmlFor="sponsorName" className="block text-sm font-medium text-gray-700">Name</label>
                       <Input
                         id="sponsorName"
@@ -315,7 +284,7 @@ const ResearchPage: NextPage = () => {
                       />
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-1.5">
                       <label htmlFor="sponsorEmail" className="block text-sm font-medium text-gray-700">Email</label>
                       <Input
                         id="sponsorEmail"
@@ -329,7 +298,7 @@ const ResearchPage: NextPage = () => {
                     </div>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <label htmlFor="companyName" className="block text-sm font-medium text-gray-700">Company/Organization Name</label>
                     <Input
                       id="companyName"
@@ -341,7 +310,7 @@ const ResearchPage: NextPage = () => {
                     />
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <label htmlFor="sponsorshipTier" className="block text-sm font-medium text-gray-700">Sponsorship Tier</label>
                     <select
                       id="sponsorshipTier"
@@ -357,7 +326,7 @@ const ResearchPage: NextPage = () => {
                     </select>
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <label htmlFor="sponsorMessage" className="block text-sm font-medium text-gray-700">Additional Message (Optional)</label>
                     <textarea
                       id="sponsorMessage"
@@ -371,7 +340,7 @@ const ResearchPage: NextPage = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-leo hover:bg-leo/90 transition-colors py-6 text-lg font-semibold"
+                    className="w-full bg-leo hover:bg-leo/90 transition-colors py-3 sm:py-6 text-base sm:text-lg font-semibold"
                     disabled={isSponsorSubmitting}
                   >
                     {isSponsorSubmitting ? 'Submitting...' : 'Submit Sponsorship Interest'}
@@ -398,9 +367,68 @@ const ResearchPage: NextPage = () => {
             <FileText className="h-8 w-8 md:h-12 md:w-12 text-leo" />
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Works in Progress</h2>
           </div>
-
           <PaperCarousel papers={researchPapers.worksInProgress} />
         </section>
+      </div>
+    </div>
+  );
+};
+
+// Paper Carousel Component
+const PaperCarousel = ({ papers }: { papers: Paper[] }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const totalPapers = papers.length;
+  
+  const nextPaper = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPapers);
+  };
+  
+  const prevPaper = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPapers) % totalPapers);
+  };
+  
+  if (papers.length === 0) {
+    return <p className="text-center text-gray-500">No papers available</p>;
+  }
+  
+  const currentPaper = papers[currentIndex];
+  
+  return (
+    <div className="relative">
+      <Card className="bg-white shadow-md">
+        <CardContent className="p-6">
+          <h3 className="text-xl font-bold mb-2">{currentPaper.title}</h3>
+          <p className="text-sm text-gray-600 mb-4">
+            {currentPaper.authors.join(', ')} 
+            {currentPaper.year && ` (${currentPaper.year})`}
+            {currentPaper.conference && ` - ${currentPaper.conference}`}
+          </p>
+          <p className="text-gray-700">{currentPaper.abstract}</p>
+        </CardContent>
+      </Card>
+      
+      <div className="flex justify-between mt-4">
+        <Button 
+          variant="outline" 
+          size="icon" 
+          onClick={prevPaper}
+          className="rounded-full"
+          aria-label="Previous paper"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
+        <div className="text-sm text-gray-500">
+          {currentIndex + 1} of {totalPapers}
+        </div>
+        <Button 
+          variant="outline" 
+          size="icon" 
+          onClick={nextPaper}
+          className="rounded-full"
+          aria-label="Next paper"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </Button>
       </div>
     </div>
   );
