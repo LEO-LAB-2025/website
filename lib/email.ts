@@ -23,7 +23,7 @@ export async function sendConferenceSponsorshipEmail(data: any) {
 
     const response = await resend.emails.send({
       from: 'LEO Conference <onboarding@resend.dev>',
-      to: 'sher.singh.ug23@plaksha.edu.in',
+      to: 'sherpartap1101@gmail.com',
       subject: 'New Conference Sponsorship Interest',
       text: emailContent,
     });
