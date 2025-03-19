@@ -1,0 +1,9 @@
+/* Dropdown menu styles */
+.dropdown-container:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-trigger:hover {
+  color: black;
+}

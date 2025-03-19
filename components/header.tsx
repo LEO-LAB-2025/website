@@ -8,7 +8,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -16,11 +16,30 @@ const navItems = [
   { name: "Research", path: "/research" },
   { name: "Workshops", path: "/workshop" },
   { name: "Courses", path: "/courses" },
-  { name: "Careers", path: "/careers" }
+  { name: "Careers", path: "/careers" },
+  { 
+    name: "Products", 
+    path: "#",
+    hasDropdown: true,
+    dropdownItems: [
+      { name: "Leo Magazine", path: "/products/magazine" }
+    ]
+  }
 ];
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const handleMouseEnter = (itemName: string) => {
+    if (itemName === "Products") {
+      setActiveDropdown(itemName);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setActiveDropdown(null);
+  };
 
   return (
     <header className="fixed top-0 w-full bg-leo border-b border-black z-50">
@@ -59,12 +78,38 @@ export function Header() {
           <NavigationMenu className="hidden md:block flex-1">
             <NavigationMenuList className="flex items-center justify-end space-x-6 lg:space-x-8">
               {navItems.map((item) => (
-                <NavigationMenuItem key={item.name}>
-                  <Link href={item.path} passHref legacyBehavior>
-                    <NavigationMenuLink className="px-3 py-2 text-sm lg:text-base text-white hover:text-black transition-colors font-medium">
-                      {item.name}
-                    </NavigationMenuLink>
-                  </Link>
+                <NavigationMenuItem key={item.name} className="max-w-fit">
+                  {item.hasDropdown ? (
+                    <div 
+                      className="relative"
+                      onMouseEnter={() => handleMouseEnter(item.name)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div className="px-3 py-2 text-sm lg:text-base text-white hover:text-black transition-colors font-medium cursor-pointer flex items-center whitespace-nowrap">
+                        {item.name}
+                        <ChevronDown className="ml-1 h-4 w-4" />
+                      </div>
+                      <div className={`absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 z-50 ${activeDropdown === item.name ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                        <div className="py-1">
+                          {item.dropdownItems?.map((dropdownItem, index) => (
+                            <Link 
+                              key={index} 
+                              href={dropdownItem.path}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link href={item.path} passHref legacyBehavior>
+                      <NavigationMenuLink className="px-3 py-2 text-sm lg:text-base text-white hover:text-black transition-colors font-medium whitespace-nowrap">
+                        {item.name}
+                      </NavigationMenuLink>
+                    </Link>
+                  )}
                 </NavigationMenuItem>
               ))}
             </NavigationMenuList>
@@ -86,14 +131,35 @@ export function Header() {
           >
             <div className="p-6 space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.path}
-                  className="block text-graygray-700 hover:text-leo transition-colors py-2 text-lg font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.hasDropdown ? (
+                    <div className="space-y-2">
+                      <div className="block text-gray-700 py-2 text-lg font-medium">
+                        {item.name}
+                      </div>
+                      <div className="pl-4 space-y-2 border-l-2 border-gray-200">
+                        {item.dropdownItems?.map((dropdownItem, index) => (
+                          <Link
+                            key={index}
+                            href={dropdownItem.path}
+                            className="block text-gray-600 hover:text-leo transition-colors py-1 text-base"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.path}
+                      className="block text-gray-700 hover:text-leo transition-colors py-2 text-lg font-medium"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
             </div>
           </div>
