@@ -3,10 +3,12 @@ import type { NextPage } from 'next';
 import Image from "next/image";
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Calendar, MapPin } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const WorkshopPage: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
   
  
   useEffect(() => {
@@ -52,8 +54,247 @@ const WorkshopPage: NextPage = () => {
         {/* Call for Papers Section */}
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden">
           <div className="bg-leo/5 p-4 sm:p-8 md:p-12 space-y-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-leo text-center">The LEO Economics Conference</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-leo text-center">The LEO Economics Conference 2025</h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto">Join us for a transformative gathering of minds in economic research and behavioral studies</p>
+
+            {/* Conference Schedule Section */}
+            <div className="bg-white/70 p-6 rounded-lg shadow-sm mb-8">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="bg-leo/10 p-3 rounded-full">
+                  <Calendar className="w-6 h-6 text-leo" />
+                </div>
+                <h3 className="text-xl font-semibold">Conference Schedule</h3>
+              </div>
+              
+              {/* Tabs for different days */}
+              <div className="mb-6">
+                <div className="flex border-b border-gray-200">
+                  {['25th April', '26th April', '27th April'].map((day, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveTab(index)}
+                      className={`py-2 px-4 font-medium text-sm md:text-base transition-colors ${activeTab === index ? 'border-b-2 border-leo text-leo' : 'text-gray-500 hover:text-leo'}`}
+                    >
+                      {day}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Day 1 Schedule */}
+              <div className={`${activeTab === 0 ? 'block' : 'hidden'} space-y-4`}>
+                <h4 className="font-semibold text-leo">25th April 2025</h4>
+                <div className="space-y-3">
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">2:00 PM: Welcome</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">2:15 PM: Keynote 1</div>
+                    <div className="text-gray-700">Rimy Oberoi with Prof. Ashwini Deshpande and Dr. Vidhya Soundararajan</div>
+                  </div>
+
+                  {/* EDUCATION AND IDENTITY Section */}
+                  <div className="bg-leo/10 p-4 rounded-lg">
+                    <h5 className="text-lg font-semibold text-leo mb-3">EDUCATION AND IDENTITY</h5>
+                    <div className="space-y-3">
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:00 PM: Paper 1</div>
+                        <div className="text-gray-700">Religious Identity, Lost Learning: Evidence from Colonial India</div>
+                        <div className="text-gray-700">Dr. Yatish Arya, Ashoka University</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:25 PM: Paper 2</div>
+                        <div className="text-gray-700">Does negative marking lead to gendered exam taking behavior: experimental evidence from India</div>
+                        <div className="text-gray-700">Dr. Swati Sharma, IIT Delhi</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:50 PM: Paper 3</div>
+                        <div className="text-gray-700">The Long-Run Eﬀects of a Schooling System Targeted Towards Historically Disadvantaged Communities</div>
+                        <div className="text-gray-700">Dr. Naveen Kumar G, BGS College of Engineering & Technology, Bangalore</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">4:15 PM: Tea & Campus Tour</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">5:00 PM: Paper 4</div>
+                        <div className="text-gray-700">Computer Literacy and discrimination between Scheduled and non-scheduled groups among the Working Age Population in India (15-59 Years of Age)</div>
+                        <div className="text-gray-700">Dr. Jadhav Chakradhar, CESS</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">5:25 PM: Paper 5</div>
+                        <div className="text-gray-700">The Persistence of Disadvantages: Theory and Evidence</div>
+                        <div className="text-gray-700">Dr. Nishtha Sharma, New York University, Abu Dhabi</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">5:50 PM: Lightning Presentations: Personnel Economics</div>
+                    <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
+                      <li>The Impact of Migration on Self-Employment of Locals - Sohini Mazumder, IIM Calcutta</li>
+                      <li>Job Search: Bridging the Miles to Non-Metro Locations - Vandana Saini, IIM Bangalore</li>
+                      <li>Technological Progress and Labor Market Outcomes: Evidence from Indian Organized Manufacturing Sector - Lakhi Narayan Bhardwaj, IIT Guwahati</li>
+                      <li>Precision of Monitoring and its Impact on Performance in Competition - Divyanshu Jain, IIM Ahmedabad</li>
+                      <li>Weaving Well-being: The Changing Landscape of Female Job Opportunities and Child Survival in Bangladesh - Kirti Tater, Shiv Nadar Institute of Eminence</li>
+                      <li>Labor Market Penalty for Single Mothers - Shubham Ojha, IIM Calcutta</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Day 2 Schedule */}
+              <div className={`${activeTab === 1 ? 'block' : 'hidden'} space-y-4`}>
+                <h4 className="font-semibold text-leo">26th April 2025</h4>
+                <div className="space-y-3">
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">9:45 AM: Keynote 2</div>
+                    <div className="text-gray-700">Prof. Abhiroop Mukhopadhyay, ISI Delhi</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">10:15 AM: Keynote 3</div>
+                    <div className="text-gray-700">Dr. Aparajita Dasgupta, Ashoka University</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">10:45 AM: Keynote 4</div>
+                    <div className="text-gray-700">Prof. Farzana Afridi, ISI Delhi</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">11:15 AM: Paper 6</div>
+                    <div className="text-gray-700">Regularized Opinion Pools for Density Forecasts under Bayesian Inspired Framework</div>
+                    <div className="text-gray-700">Dr. Parush Arora, Ashoka University</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">11:40 AM: Keynote 5</div>
+                    <div className="text-gray-700">Prof. Rohini Somanathan, DSE</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">12:10 PM: Tea</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">12:30 PM: Keynote 6</div>
+                    <div className="text-gray-700">Prof. K Narayanan, IIT Bombay</div>
+                  </div>
+
+                  {/* SUSTAINABILITY Section */}
+                  <div className="bg-leo/10 p-4 rounded-lg">
+                    <h5 className="text-lg font-semibold text-leo mb-3">SUSTAINABILITY</h5>
+                    <div className="space-y-3">
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">1:00 PM: Paper 7</div>
+                        <div className="text-gray-700">Heat stress and hospitalization in India</div>
+                        <div className="text-gray-700">Dr. Abhishek Dureja, Plaksha University</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">1:25 PM: Paper 8</div>
+                        <div className="text-gray-700">Improving household waste segregation in developing country with two-sided interventions: an experimental study in Bangladesh</div>
+                        <div className="text-gray-700">Dr. Shivani Wadehra, UPES</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">1:50 PM: Lunch</div>
+                  </div>
+
+                  {/* INDUSTRIAL ORGANISATION Section */}
+                  <div className="bg-leo/10 p-4 rounded-lg">
+                    <h5 className="text-lg font-semibold text-leo mb-3">INDUSTRIAL ORGANISATION</h5>
+                    <div className="space-y-3">
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:00 PM: Paper 9</div>
+                        <div className="text-gray-700">Competition authorities and merger-induced demand changes</div>
+                        <div className="text-gray-700">Dr. Kiriti Kanjilal, IIIT Delhi</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:25 PM: Paper 10</div>
+                        <div className="text-gray-700">Can Mergers Drive Drastic Innovations?</div>
+                        <div className="text-gray-700">Dr. Saish Nevrekar, Ashoka University</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">3:50 PM: Paper 11</div>
+                        <div className="text-gray-700">The Impact of Process and Product Innovation on Employment across Indian Innovative Manufacturing Firms and the Role of Foreign-Ownership</div>
+                        <div className="text-gray-700">Dr. Smruti Ranjan Behera, IIT Ropar</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">4:15 PM: Tea and Tour</div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">5:00 PM: Lightning Presentations: Conflict, Violence, and Safety</div>
+                    <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
+                      <li>Impact of Terrorism on Capital Investment by Firms: Evidence from the State Jammu and Kashmir, India - Rohit Duwadi, Arcus Policy Research</li>
+                      <li>Violence, son preference and fertility: Evidence from India - Ather Hassan Dar, IIT Kanpur</li>
+                      <li>Homes of Harm: Spousal Violence and Child Malnutrition in India - Noyel Sebastian, JNU</li>
+                      <li>Signing for Safety: Can mandatory marriage registration reduce domestic violence? - Rikhia Bhukta, IIT Kanpur</li>
+                      <li>Safe Travels: Transport Development and Women's Safety in India - Anisha Garg, University of Warwick</li>
+                      <li>Breaking the Night Shift Barrier: How Legal Reforms Impact Demand for Women's Work in India - Sarvnipun Kaur, Plaksha University</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Day 3 Schedule */}
+              <div className={`${activeTab === 2 ? 'block' : 'hidden'} space-y-4`}>
+                <h4 className="font-semibold text-leo">27th April 2025</h4>
+                <div className="space-y-3">
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">9:35 AM: Keynote 7</div>
+                    <div className="text-gray-700">Prof. Sujoy Chakravarty, JNU</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">10:15 AM: Keynote 8</div>
+                    <div className="text-gray-700">Dr. Shabana Mitra, ICRIER</div>
+                  </div>
+
+                  {/* MANUFACTURING AND EMPLOYMENT Section */}
+                  <div className="bg-leo/10 p-4 rounded-lg">
+                    <h5 className="text-lg font-semibold text-leo mb-3">MANUFACTURING AND EMPLOYMENT</h5>
+                    <div className="space-y-3">
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">10:30 AM: Paper 12</div>
+                        <div className="text-gray-700">Chinese Import Competition and Expenditure of Domestic Manufacturing Firms: Evidence from India</div>
+                        <div className="text-gray-700">Dr. Subhasree Sarkar, Ashoka University</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">10:55 AM: Paper 13</div>
+                        <div className="text-gray-700">Trade Shocks and the Changing Economic Geography of the US</div>
+                        <div className="text-gray-700">Dr. Priyam Verma, Ashoka University</div>
+                      </div>
+                      <div className="bg-white/70 p-3 rounded-lg">
+                        <div className="font-medium">11:20 AM: Paper 14</div>
+                        <div className="text-gray-700">Labour vs. Energy: Input Substitution in the Indian Manufacturing Sector</div>
+                        <div className="text-gray-700">Dr. Raavi Aggarwal, ISI Delhi</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">11:45 AM: Tea</div>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">12:00 PM: Lightning Presentations: Resource Economics</div>
+                    <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
+                      <li>Decoding Crude Oil Trade Dynamics: A Comparative Analysis of Machine Learning and Deep Learning Models - Ritu Singh, IIT Kanpur</li>
+                      <li>Bureaucratic Learning and Environmental Clearances in India - Pranav Gupta, University of California, Berkeley</li>
+                      <li>Comparative Study of the Impact of the Indian Transportation Infrastructure on Firm-level Performance with Focus on Inland Waterways - Manish Chauhan, IIT Kanpur</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">Lightning Presentations: Identity</div>
+                    <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
+                      <li>Linguistic Diversity and Development at a Finer Geographic Scale: A Study of Indian Districts - Saarthak Anand, ISI Delhi</li>
+                      <li>A Wedding Gift from the Government!! - On Marriage Subsidies and Fertility Preferences in India - Sulagna Bhattacharya, IIM Calcutta</li>
+                      <li>Colourism, confidence and productivity: Experimental evidence from India - Nishat Anjum, Jawaharlal Nehru University</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Main Conference Info */}
             <div className="grid md:grid-cols-2 gap-8 items-start">
@@ -89,8 +330,12 @@ const WorkshopPage: NextPage = () => {
                       <span className="font-medium text-leo">February 28, 2025</span>
                     </li>
                     <li className="flex items-center text-gray-700 bg-leo/5 p-3 rounded-lg">
-                      <span className="w-40 font-medium">Notification:</span>
-                      <span className="font-medium text-leo">March 15, 2025</span>
+                      <span className="w-40 font-medium">Paper Acceptance:</span>
+                      <span className="font-medium text-leo">March 11, 2025</span>
+                    </li>
+                    <li className="flex items-center text-gray-700 bg-leo/5 p-3 rounded-lg">
+                      <span className="w-40 font-medium">Conference:</span>
+                      <span className="font-medium text-leo">April 25-27, 2025</span>
                     </li>
                   </ul>
                 </div>
@@ -99,14 +344,13 @@ const WorkshopPage: NextPage = () => {
               <div className="space-y-6">
               <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
                   <h3 className="font-semibold mb-4">Register Now</h3>
-                  <Image
-                    src='/qr.png'
-                    alt='QR Code for Registration'
-                    width={180}
-                    height={180}
-                    className="rounded-lg shadow-md"
-                  />
-                  <p className="text-sm text-gray-600 mt-4 text-center">Scan to register for the conference</p>
+                  <Button
+                    className="bg-leo hover:bg-leo/90 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                    onClick={() => window.open('https://forms.office.com/pages/responsepage.aspx?id=M4x5RUMbAUy_PtjWVdM4nNAi0Zt6FWdBitsxdxfVHfxUMDBHM1BPUkxRWkpFR0kxQVZTVUhBV09SVC4u&route=shorturl', '_blank')}
+                  >
+                    Register for Conference
+                  </Button>
+                  <p className="text-sm text-gray-600 mt-4 text-center">Click to register to experience the conference at Plaksha University </p>
                 </div>
                 <div className="bg-white/70 p-6 rounded-lg shadow-sm">
                   <h3 className="font-semibold mb-4">Conference Topics</h3>
@@ -204,7 +448,47 @@ const WorkshopPage: NextPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Venue Information Section */}
+            <section className="space-y-6">
+              <div className="flex items-center gap-3 md:gap-4 mb-8">
+                <MapPin className="h-8 w-8 md:h-12 md:w-12 text-leo" />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">Venue Information</h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
+                  <CardContent className="p-8">
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">Plaksha University</h3>
+                        <p className="text-gray-600">Alpha, Sector 101, IT City Rd, Sahibzada Ajit Singh Nagar, Punjab 140306</p>
+                      </div>
+                      <div className="space-y-2">
+                        <p className="text-gray-700">Join us at Plaksha University's state-of-the-art campus for three days of engaging discussions, presentations, and networking opportunities.</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-0 aspect-video">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3433.102853085538!2d76.72302317615498!3d30.631058774633445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe97919cad48b%3A0xf8f99185e7d5540!2sPlaksha%20University!5e0!3m2!1sen!2sin!4v1738991182835!5m2!1sen!2sin"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </CardContent>
+                </Card>
+              </div>
+            </section>
           </div>
+         
+          
 
         </div>
         
