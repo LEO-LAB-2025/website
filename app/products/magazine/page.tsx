@@ -14,7 +14,7 @@ export default function MagazinePage() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <Image 
-              src="/magazine.png" 
+              src="magazine.png" 
               alt="LEO Magazine Cover" 
               width={500} 
               height={700} 
