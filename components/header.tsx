@@ -49,7 +49,7 @@ export function Header() {
           <div className="flex-1 flex justify-center md:justify-start">
             <Link href="/" className="font-extrabold bg-white inline-block">
               <Image
-                src="/leo.png"
+                src="leo.png"
                 alt="LEO Lab Logo"
                 width={130}
                 height={20}
