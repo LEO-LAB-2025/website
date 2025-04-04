@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 
 
-const resend = new Resend(re_jMMTmNjm_4moPYmG6RqHFTajyeTLDEeX3);
+const resend = new Resend("re_jMMTmNjm_4moPYmG6RqHFTajyeTLDEeX3");
 
 
 export async function sendConferenceSponsorshipEmail(data: any) {
