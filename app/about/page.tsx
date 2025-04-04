@@ -16,7 +16,7 @@ export default function AboutPage() {
             {/* Placeholder for LEO Lab logo */}
             <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
-                src="/leo.png"
+                src="leo.png"
                 alt="LEO Lab Logo"
                 width={192}
                 height={192}
@@ -28,7 +28,7 @@ export default function AboutPage() {
             {/* Placeholder for Plaksha University logo */}
             <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
-                src="/pu.png"
+                src="pu.png"
                 alt="Plaksha Logo"
                 width={192}
                 height={192}
