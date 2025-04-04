@@ -7,11 +7,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const carouselImages = [
-  { src: "/h4.JPG", alt: "LEO Lab Research Activities 1" },
-  { src: "/2.jpeg", alt: "LEO Lab Workshop Session" },
-  { src: "/h1.JPG", alt: "LEO Lab Team" },
-  { src: "/h2.JPG", alt: "LEO Lab Team" },
-  { src: "/h3.JPG", alt: "LEO Lab Team" }
+  { src: "h4.JPG", alt: "LEO Lab Research Activities 1" },
+  { src: "2.jpeg", alt: "LEO Lab Workshop Session" },
+  { src: "h1.JPG", alt: "LEO Lab Team" },
+  { src: "h2.JPG", alt: "LEO Lab Team" },
+  { src: "h3.JPG", alt: "LEO Lab Team" }
 
 ];
 
