@@ -19,11 +19,11 @@ const WorkshopPage: NextPage = () => {
   }, []);
 
   const carouselImages = [
-    { src: "/p2.JPG", alt: "LEO Lab Research Activities" },
-    { src: "/p1.JPG", alt: "LEO Lab Workshop Session" },
-    { src: "/p3.JPG", alt: "LEO Lab Team" },
-    { src: "/p4.JPG", alt: "LEO Lab Team" },
-    { src: "/p5.JPG", alt: "LEO Lab Team" },
+    { src: "p2.JPG", alt: "LEO Lab Research Activities" },
+    { src: "p1.JPG", alt: "LEO Lab Workshop Session" },
+    { src: "p3.JPG", alt: "LEO Lab Team" },
+    { src: "p4.JPG", alt: "LEO Lab Team" },
+    { src: "p5.JPG", alt: "LEO Lab Team" },
   ];
 
   const workshopTopics = [
@@ -424,7 +424,7 @@ const WorkshopPage: NextPage = () => {
                 <div className="bg-white/80 p-6 rounded-lg text-center space-y-4 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="relative w-48 h-48 mx-auto">
                     <Image
-                      src="/leo.png"
+                      src="leo.png"
                       alt="LEO Lab Logo"
                       fill
                       className="object-contain"
@@ -437,7 +437,7 @@ const WorkshopPage: NextPage = () => {
                 <div className="bg-white/80 p-6 rounded-lg text-center space-y-4 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="relative w-48 h-48 mx-auto">
                     <Image
-                      src="/tef.jpeg"
+                      src="tef.jpeg"
                       alt="TEF Logo"
                       fill
                       className="object-contain"
