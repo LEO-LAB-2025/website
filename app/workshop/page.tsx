@@ -263,11 +263,6 @@ const WorkshopPage: NextPage = () => {
                         <div className="text-gray-700">Trade Shocks and the Changing Economic Geography of the US</div>
                         <div className="text-gray-700">Dr. Priyam Verma, Ashoka University</div>
                       </div>
-                      <div className="bg-white/70 p-3 rounded-lg">
-                        <div className="font-medium">11:20 AM: Paper 14</div>
-                        <div className="text-gray-700">Labour vs. Energy: Input Substitution in the Indian Manufacturing Sector</div>
-                        <div className="text-gray-700">Dr. Raavi Aggarwal, ISI Delhi</div>
-                      </div>
                     </div>
                   </div>
 
