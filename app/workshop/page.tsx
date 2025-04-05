@@ -497,7 +497,7 @@ const WorkshopPage: NextPage = () => {
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden">
           <div className="bg-leo/5 p-4 sm:p-8 md:p-12 space-y-8">
             <h2 className="text-2xl md:text-3xl font-semibold text-center text-leo">Our Previous Workshop</h2>
-            <p className="text-center text-gray-600 max-w-2xl mx-auto">LEO Lab Workshop Series 2023: Exploring Economic Behavior and Organizational Dynamics</p>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto">LEO Lab Workshop Series 2024: Exploring Economic Behavior and Organizational Dynamics</p>
 
             {/* Photo Carousel */}
             <div className="relative w-full aspect-video max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
@@ -546,7 +546,7 @@ const WorkshopPage: NextPage = () => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold">December 2023</h3>
+                      <h3 className="text-xl font-semibold">April 2024</h3>
                       <p className="text-gray-600">Plaksha University</p>
                     </div>
                   </div>
