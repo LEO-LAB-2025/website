@@ -8,6 +8,9 @@ const openSans = Open_Sans({ subsets: ['latin'] });
 export const metadata = {
   title: 'L.E.O. Lab',
   description: 'Laboratory for Empirical Observations',
+  icons: {
+    icon: 'leo.png'
+  }
 };
 
 export default function RootLayout({
