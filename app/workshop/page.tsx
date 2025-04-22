@@ -59,18 +59,27 @@ const WorkshopPage: NextPage = () => {
             <p className="text-center text-gray-600 max-w-2xl mx-auto">Join us for a transformative gathering of minds in economic research and behavioral studies</p>
 
             {/* Conference Schedule Section */}
-            <div className="bg-white/70 p-6 rounded-lg shadow-sm mb-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="bg-leo/10 p-3 rounded-full">
-                  <Calendar className="w-6 h-6 text-leo" />
+            <div className="bg-white/70 p-6 rounded‑lg shadow‑sm mb‑8">
+                <div className="flex flex-wrap items-center gap-4 mb-6">
+                  <div className="bg-leo/10 p-3 rounded-full">
+                    <Calendar className="w-6 h-6 text-leo" />
+                  </div>
+                  <h3 className="text-xl font-semibold">Conference Schedule</h3>
+                  <Link href="Conf_Schedule.pdf" target="_blank" download>
+                    <Button
+                      className="
+                        bg-leo hover:bg-leo/80 text-white
+                        px-2 py-1 sm:px-4 sm:py-2
+                        text-xs sm:text-sm
+                        whitespace-normal
+                      "
+                    >
+                      Download Schedule PDF
+                    </Button>
+                  </Link>
                 </div>
-                <h3 className="text-xl font-semibold">Conference Schedule</h3>
-                <Link href="Conf_Schedule.pdf" target="_blank" download>
-                <Button className="bg-leo hover:bg-leo/80 text-white">
-                  Download Schedule PDF
-                </Button>
-              </Link>
-              </div>
+             
+
               
               {/* Tabs for different days */}
               <div className="mb-6">
