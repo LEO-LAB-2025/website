@@ -64,6 +64,11 @@ const WorkshopPage: NextPage = () => {
                   <Calendar className="w-6 h-6 text-leo" />
                 </div>
                 <h3 className="text-xl font-semibold">Conference Schedule</h3>
+                <Link href="/Conf_Schedule.pdf" target="_blank" download>
+                <Button className="bg-leo hover:bg-leo/80 text-white">
+                  Download Schedule PDF
+                </Button>
+              </Link>
               </div>
               
               {/* Tabs for different days */}
