@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Calendar, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 const WorkshopPage: NextPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
