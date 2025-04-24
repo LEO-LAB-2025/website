@@ -326,7 +326,7 @@ const WorkshopPage: NextPage = () => {
                   </div>
 
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">11:40 PM: Lightning Presentations: Identity and Resource Economics</div>
+                    <div className="font-medium">11:40 AM: Lightning Presentations: Identity and Resource Economics</div>
                     <div className="text-gray-700">Room no. 2201</div>
                     <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
                       <li>Labor Market Penalty for Single Mothers (11:40 PM) - Shubham Ojha, IIM Calcutta</li>
