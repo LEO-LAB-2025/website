@@ -81,7 +81,6 @@ const WorkshopPage: NextPage = () => {
              
 
               
-              {/* Tabs for different days */}
               <div className="mb-6">
                 <div className="flex border-b border-gray-200">
                   {['25th April', '26th April', '27th April'].map((day, index) => (
@@ -162,20 +161,17 @@ const WorkshopPage: NextPage = () => {
                       <li>Job Search: Bridging the Miles to Non-Metro Locations - Vandana Saini, IIM Bangalore</li>
                       <li>Technological Progress and Labor Market Outcomes: Evidence from Indian Organized Manufacturing Sector - Lakhi Narayan Bhardwaj, IIT Guwahati</li>
                       <li>Precision of Monitoring and its Impact on Performance in Competition - Divyanshu Jain, IIM Ahmedabad</li>
-                      <li>Weaving Well-being: The Changing Landscape of Female Job Opportunities and Child Survival in Bangladesh - Kirti Tater, Shiv Nadar Institute of Eminence</li>
-                      <li>Labor Market Penalty for Single Mothers - Shubham Ojha, IIM Calcutta</li>
                     </ul>
                   </div>
                   
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">7:30 PM: Traditional Night Event</div>
+                    <div className="font-medium">6:50 PM: Traditional Night Event</div>
                     <div className="text-gray-700">Summer and Winter Courts Near Blue Tokai</div>
                   </div>
                   
                   <div className="bg-leo/5 p-3 rounded-lg">
                     <div className="font-medium">8:30 PM: Dinner</div>
                     <div className="text-gray-700">Mess</div>
-
                   </div>
                 </div>
               </div>
@@ -273,7 +269,7 @@ const WorkshopPage: NextPage = () => {
                   </div>
 
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">4:15 PM: Tea and Tour</div>
+                    <div className="font-medium">4:15 PM: Tea and Campus Tour</div>
                   </div>
 
                   <div className="bg-leo/5 p-3 rounded-lg">
@@ -281,18 +277,15 @@ const WorkshopPage: NextPage = () => {
                     <div className="text-gray-700">Room no. 2201</div>
                     <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
                       <li>Impact of Terrorism on Capital Investment by Firms: Evidence from the State Jammu and Kashmir, India - Rohit Duwadi, Arcus Policy Research</li>
-                      <li>Violence, son preference and fertility: Evidence from India - Ather Hassan Dar, IIT Kanpur</li>
                       <li>Homes of Harm: Spousal Violence and Child Malnutrition in India - Noyel Sebastian, JNU</li>
-                      <li>Signing for Safety: Can mandatory marriage registration reduce domestic violence? - Rikhia Bhukta, IIT Kanpur</li>
                       <li>Safe Travels: Transport Development and Women's Safety in India - Anisha Garg, University of Warwick</li>
                       <li>Cinderella No More: Night Work Bans and Women's Employment in India - Sarvnipun Kaur, Plaksha University</li>
                     </ul>
                   </div>
                   
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">6:45 PM: Departure for Gala Dinner for Presenters</div>
-                    <div className="text-gray-700">Gate 1</div>
-
+                    <div className="font-medium">6:30 PM: Departure for Gala Dinner for Presenters</div>
+                    <div className="text-gray-700">Gate No. 1</div>
                   </div>
                 </div>
               </div>
@@ -329,26 +322,17 @@ const WorkshopPage: NextPage = () => {
                   </div>
 
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">11:05 AM: Lightning Presentations: Resource Economics</div>
-                    <div className="text-gray-700">Room no. 2201</div>
-                    <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
-                      <li>Decoding Crude Oil Trade Dynamics: A Comparative Analysis of Machine Learning and Deep Learning Models - Ritu Singh, IIT Kanpur</li>
-                      <li>Bureaucratic Learning and Environmental Clearances in India - Pranav Gupta, University of California, Berkeley</li>
-                      <li>Comparative Study of the Impact of the Indian Transportation Infrastructure on Firm-level Performance with Focus on Inland Waterways - Manish Chauhan, IIT Kanpur</li>
-                    </ul>
+                    <div className="font-medium">11:10 AM: Tea</div>
                   </div>
 
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">11:50 AM: Tea</div>
-                  </div>
-
-                  <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">12:10 PM: Lightning Presentations: Identity</div>
+                    <div className="font-medium">11:40 PM: Lightning Presentations: Identity and Resource Economics</div>
                     <div className="text-gray-700">Room no. 2201</div>
                     <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
-                      <li>Linguistic Diversity and Development at a Finer Geographic Scale: A Study of Indian Districts - Saarthak Anand, ISI Delhi</li>
-                      <li>A Wedding Gift from the Government!! - On Marriage Subsidies and Fertility Preferences in India - Sulagna Bhattacharya, IIM Calcutta</li>
-                      <li>Colourism, confidence and productivity: Experimental evidence from India - Nishat Anjum, Jawaharlal Nehru University</li>
+                      <li>Labor Market Penalty for Single Mothers (11:40 PM) - Shubham Ojha, IIM Calcutta</li>
+                      <li>Colourism, confidence and productivity: Experimental evidence from India (11:55 PM) - Nishat Anjum, Jawaharlal Nehru University</li>
+                      <li>Weaving Well-being: The Changing Landscape of Female Job Opportunities and Child Survival in Bangladesh (12:10 PM) - Kirti Tater, Shiv Nadar Institute of Eminence</li>
+                      <li>Decoding Crude Oil Trade Dynamics: A Comparative Analysis of Machine Learning and Deep Learning Models (12:25 PM) - Ritu Singh, IIT Kanpur</li>
                     </ul>
                   </div>
                   
@@ -364,7 +348,6 @@ const WorkshopPage: NextPage = () => {
                 </div>
               </div>
             </div>
-
             {/* Main Conference Info */}
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-9">
