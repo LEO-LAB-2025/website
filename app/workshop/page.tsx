@@ -329,10 +329,11 @@ const WorkshopPage: NextPage = () => {
                     <div className="font-medium">11:40 AM: Lightning Presentations: Identity and Resource Economics</div>
                     <div className="text-gray-700">Room no. 2201</div>
                     <ul className="list-disc list-inside text-gray-700 pl-2 pt-2 space-y-1">
-                      <li>Labor Market Penalty for Single Mothers (11:40 PM) - Shubham Ojha, IIM Calcutta</li>
-                      <li>Colourism, confidence and productivity: Experimental evidence from India (11:55 PM) - Nishat Anjum, Jawaharlal Nehru University</li>
-                      <li>Weaving Well-being: The Changing Landscape of Female Job Opportunities and Child Survival in Bangladesh (12:10 PM) - Kirti Tater, Shiv Nadar Institute of Eminence</li>
-                      <li>Decoding Crude Oil Trade Dynamics: A Comparative Analysis of Machine Learning and Deep Learning Models (12:25 PM) - Ritu Singh, IIT Kanpur</li>
+                      <li>A Wedding Gift from the Government!! - On Marriage Subsidies and Fertility Preferences in India - Sulagna Bhattacharya, IIM Calcutta</li>
+                      <li>Labor Market Penalty for Single Mothers - Shubham Ojha, IIM Calcutta</li>
+                      <li>Colourism, confidence and productivity: Experimental evidence from India - Nishat Anjum, Jawaharlal Nehru University</li>
+                      <li>Weaving Well-being: The Changing Landscape of Female Job Opportunities and Child Survival in Bangladesh - Kirti Tater, Shiv Nadar Institute of Eminence</li>
+                      <li>Decoding Crude Oil Trade Dynamics: A Comparative Analysis of Machine Learning and Deep Learning Models - Ritu Singh, IIT Kanpur</li>
                     </ul>
                   </div>
                   
