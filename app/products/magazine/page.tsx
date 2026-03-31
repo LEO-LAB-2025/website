@@ -41,7 +41,7 @@ export default function MagazinePage() {
             </div>
 
             <div className="pt-4">
-              <Link href="/magazine_2026.pdf" target="_blank" download>
+              <Link href="magazine_2026.pdf" target="_blank" download>
                 <Button className="bg-leo hover:bg-leo/80 text-white">
                   Download 2026 Magazine PDF
                 </Button>
@@ -98,7 +98,7 @@ export default function MagazinePage() {
             </div>
             
             <div className="pt-4">
-              <Link href="/magazine_2024.pdf" target="_blank" download>
+              <Link href="magazine_2024.pdf" target="_blank" download>
                 <Button className="bg-leo hover:bg-leo/80 text-white">
                   Download 2024 Magazine PDF
                 </Button>
