@@ -41,7 +41,7 @@ export default function MagazinePage() {
             </div>
 
             <div className="pt-4">
-              <Link href={assetPath("/magazine_2026.pdf")} target="_blank" download>
+              <Link href="/magazine_2026.pdf" target="_blank" download>
                 <Button className="bg-leo hover:bg-leo/80 text-white">
                   Download 2026 Magazine PDF
                 </Button>
@@ -57,7 +57,7 @@ export default function MagazinePage() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div>
             <Image 
-              src={assetPath("/magazine.png")} 
+              src="magazine.png" 
               alt="LEO Magazine Cover 2024" 
               width={500} 
               height={700} 
@@ -98,7 +98,7 @@ export default function MagazinePage() {
             </div>
             
             <div className="pt-4">
-              <Link href={assetPath("/magazine_2024.pdf")} target="_blank" download>
+              <Link href="/magazine_2024.pdf" target="_blank" download>
                 <Button className="bg-leo hover:bg-leo/80 text-white">
                   Download 2024 Magazine PDF
                 </Button>

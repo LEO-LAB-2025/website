@@ -8,11 +8,11 @@ import Image from 'next/image';
 import { assetPath } from '@/lib/assets';
 
 const carouselImages = [
-  { src: assetPath("/h4.JPG"), alt: "LEO Lab Research Activities 1" },
-  { src: assetPath("/2.jpeg"), alt: "LEO Lab Workshop Session" },
-  { src: assetPath("/h1.JPG"), alt: "LEO Lab Team" },
-  { src: assetPath("/h2.JPG"), alt: "LEO Lab Conference Session" },
-  { src: assetPath("/h3.JPG"), alt: "LEO Lab Panel Discussion" }
+  { src: "h4.JPG", alt: "LEO Lab Research Activities 1" },
+  { src: "2.jpeg", alt: "LEO Lab Workshop Session" },
+  { src: "h1.JPG", alt: "LEO Lab Team" },
+  { src: "h2.JPG", alt: "LEO Lab Conference Session" },
+  { src: "h3.JPG", alt: "LEO Lab Panel Discussion" }
 ];
 
 const workshopTopics = [
@@ -114,7 +114,7 @@ export default function Home() {
                 {/* Poster */}
                 <div className="relative aspect-[3/4] md:aspect-auto">
                   <Image
-                    src={assetPath("/leo_poster_2026.png")}
+                    src="leo_poster_2026.png"
                     alt="LEO Economics Conference 2026 Call for Papers Poster"
                     fill
                     className="object-contain p-4"

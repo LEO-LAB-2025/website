@@ -13,11 +13,11 @@ const WorkshopPage: NextPage = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const carouselImages = [
-    { src: assetPath("/p2.JPG"), alt: "LEO Conference 2025 Session" },
-    { src: assetPath("/p1.JPG"), alt: "LEO Conference 2025 Panel" },
-    { src: assetPath("/p3.JPG"), alt: "LEO Conference 2025 Keynote" },
-    { src: assetPath("/p4.JPG"), alt: "LEO Conference 2025 Audience" },
-    { src: assetPath("/p5.JPG"), alt: "LEO Conference 2025 Networking" },
+    { src: "p2.JPG", alt: "LEO Conference 2025 Session" },
+    { src: "p1.JPG", alt: "LEO Conference 2025 Panel" },
+    { src: "p3.JPG", alt: "LEO Conference 2025 Keynote" },
+    { src: "p4.JPG", alt: "LEO Conference 2025 Audience" },
+    { src: "p5.JPG", alt: "LEO Conference 2025 Networking" },
   ];
 
   useEffect(() => {
@@ -82,10 +82,10 @@ const WorkshopPage: NextPage = () => {
   ];
 
   const videos = [
-    { src: assetPath("/videos/leo_2025_1.mp4"), title: "LEO Conference 2025 — Keynote Highlights" },
-    { src: assetPath("/videos/leo_2025_2.mp4"), title: "LEO Conference 2025 — Panel Discussion" },
-    { src: assetPath("/videos/leo_2025_3.mp4"), title: "LEO Conference 2025 — Speaker Remarks" },
-    { src: assetPath("/videos/leo_2025_4.mp4"), title: "LEO Conference 2025 — Research Sessions" },
+    { src: assetPath("videos/leo_2025_1.mp4"), title: "LEO Conference 2025 — Keynote Highlights" },
+    { src: assetPath("videos/leo_2025_2.mp4"), title: "LEO Conference 2025 — Panel Discussion" },
+    { src: assetPath("videos/leo_2025_3.mp4"), title: "LEO Conference 2025 — Speaker Remarks" },
+    { src: assetPath("videos/leo_2025_4.mp4"), title: "LEO Conference 2025 — Research Sessions" },
   ];
 
   return (
@@ -602,14 +602,14 @@ const WorkshopPage: NextPage = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white/80 p-6 rounded-lg text-center space-y-4 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="relative w-48 h-48 mx-auto">
-                    <Image src={assetPath("/leo.png")} alt="LEO Lab Logo" fill className="object-contain" />
+                    <Image src="leo.png" alt="LEO Lab Logo" fill className="object-contain" />
                   </div>
                   <h4 className="font-semibold text-leo">LEO Lab</h4>
                   <p className="text-sm text-gray-600">Lab for Economic Behaviour in Organizations — Pioneering research in organizational economics and behavioral science</p>
                 </div>
                 <div className="bg-white/80 p-6 rounded-lg text-center space-y-4 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="relative w-48 h-48 mx-auto">
-                    <Image src={assetPath("/tef.jpeg")} alt="TEF Logo" fill className="object-contain" />
+                    <Image src="tef.jpeg" alt="TEF Logo" fill className="object-contain" />
                   </div>
                   <h4 className="font-semibold text-leo">The Employability Foundation (TEF)</h4>
                   <p className="text-sm text-gray-600">Empowering workforce development through innovative research and practical solutions</p>
