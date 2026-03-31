@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building, Users, MapPin } from "lucide-react";
 import Image from "next/image";
+import { assetPath } from "@/lib/assets";
 
 export default function AboutPage() {
   return (
@@ -16,7 +17,7 @@ export default function AboutPage() {
             {/* Placeholder for LEO Lab logo */}
             <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
-                src="leo.png"
+                src={assetPath("/leo.png")}
                 alt="LEO Lab Logo"
                 width={192}
                 height={192}
@@ -28,7 +29,7 @@ export default function AboutPage() {
             {/* Placeholder for Plaksha University logo */}
             <div className="w-full h-full flex items-center justify-center rounded-lg border-2 border-grey">
               <Image 
-                src="pu.png"
+                src={assetPath("/pu.png")}
                 alt="Plaksha Logo"
                 width={192}
                 height={192}

@@ -9,12 +9,13 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { assetPath } from "@/lib/assets";
 
 const navItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Conference 2026", path: "/workshop" },
   { name: "Research", path: "/research" },
-  { name: "Workshops", path: "/workshop" },
   { name: "Courses", path: "/courses" },
   { name: "Careers", path: "/careers" },
   { 
@@ -49,7 +50,7 @@ export function Header() {
           <div className="flex-1 flex justify-center md:justify-start">
             <Link href="/" className="font-extrabold bg-white inline-block">
               <Image
-                src="leo.png"
+                src={assetPath("/leo.png")}
                 alt="LEO Lab Logo"
                 width={130}
                 height={20}

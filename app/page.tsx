@@ -2,20 +2,21 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, ScrollText, ChevronLeft, ChevronRight } from "lucide-react";
+import { BookOpen, ScrollText, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/assets';
 
 const carouselImages = [
-  { src: "h4.JPG", alt: "LEO Lab Research Activities 1" },
-  { src: "2.jpeg", alt: "LEO Lab Workshop Session" },
-  { src: "h1.JPG", alt: "LEO Lab Team" },
-  { src: "h2.JPG", alt: "LEO Lab Team" },
-  { src: "h3.JPG", alt: "LEO Lab Team" }
-
+  { src: assetPath("/h4.JPG"), alt: "LEO Lab Research Activities 1" },
+  { src: assetPath("/2.jpeg"), alt: "LEO Lab Workshop Session" },
+  { src: assetPath("/h1.JPG"), alt: "LEO Lab Team" },
+  { src: assetPath("/h2.JPG"), alt: "LEO Lab Conference Session" },
+  { src: assetPath("/h3.JPG"), alt: "LEO Lab Panel Discussion" }
 ];
 
 const workshopTopics = [
+  "Future of Work",
   "Labour Economics",
   "Personnel Economics",
   "Behavioural Economics",
@@ -25,7 +26,6 @@ const workshopTopics = [
   "Gig & Platform Economics",
   "Gender Economics",
   "Finance & Sustainability",
-  "Vocational Education & Training"
 ];
 
 export default function Home() {
@@ -101,45 +101,61 @@ export default function Home() {
           </Card>
         </section>
 
+        {/* LEO Conference 2026 Banner */}
         <section className="mb-16 md:mb-24">
           <div className="flex items-center gap-3 md:gap-4 mb-8">
             <BookOpen className="h-8 w-8 md:h-12 md:w-12 text-leo" />
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-leo-dark">Upcoming Workshop</h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-leo-dark">The LEO Economics Conference 2026</h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-gray-50 to-gray-100">
-            <CardContent className="p-8 md:p-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-6 text-leo">The LEO Economics Conference</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-6">
+          <Card className="bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid md:grid-cols-2">
+                {/* Poster */}
+                <div className="relative aspect-[3/4] md:aspect-auto">
+                  <Image
+                    src={assetPath("/leo_poster_2026.png")}
+                    alt="LEO Economics Conference 2026 Call for Papers Poster"
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
+                {/* Info */}
+                <div className="p-8 md:p-12 space-y-6">
                   <div>
-                    <p className="text-xl font-semibold mb-2">April 25-27, 2025</p>
-                    <p className="text-lg">Plaksha University</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-leo">April 24–26, 2026</h3>
+                    <p className="text-lg text-gray-600">Plaksha University, Mohali</p>
+                    <p className="text-md text-gray-500 mt-2 font-medium">Theme: Future of Work</p>
                   </div>
                   <div className="space-y-2">
-                    <p className="font-medium">Selected participants will present their work to senior faculty members from India's leading academic institutions</p>
+                    <p className="font-medium">Selected participants will present their work to senior faculty members from India&apos;s leading academic institutions</p>
                     <p className="text-sm text-gray-600">Open to Faculty, Post-docs and PhD Candidates</p>
                   </div>
                   <div className="space-y-2">
-                    <p className="font-medium">Important Dates:</p>
-                    <ul className="space-y-1 text-gray-700">
-                      <li>Submission Deadline: February 28, 2025</li>
-                      <li>Notification of Acceptance: March 15, 2025</li>
-                    </ul>
+                    <p className="font-medium">Conference: April 24–26, 2026</p>
                   </div>
-                  
-                  <Link href="/workshop" className='mt-6 block'>
-                  <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">Learn More</Button>
-                </Link>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold">Topics Include:</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {workshopTopics.map((topic, index) => (
-                      <div key={index} className="bg-white/60 p-2 rounded-md text-sm">
-                        {topic}
-                      </div>
-                    ))}
+
+                  <div className="space-y-4">
+                    <h4 className="text-lg font-semibold">Topics Include:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {workshopTopics.map((topic, index) => (
+                        <div key={index} className="bg-white/60 p-2 rounded-md text-sm">
+                          {topic}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 pt-4">
+                    <Link href="/workshop">
+                      <Button variant="outline" className="border-leo text-leo hover:bg-leo hover:text-white">View Full Schedule</Button>
+                    </Link>
+                    <Button
+                      className="bg-leo hover:bg-leo/90 text-white"
+                      onClick={() => window.open('https://rzp.io/rzp/YQbvtuN', '_blank')}
+                    >
+                      Register Now <ExternalLink className="ml-2 h-4 w-4" />
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -147,7 +163,7 @@ export default function Home() {
           </Card>
         </section>
 
-        {/* Update the Research Highlights section similarly */}
+        {/* Research Highlights */}
         <section className="mb-16 md:mb-24">
           <div className="flex items-center gap-3 md:gap-4 mb-8">
             <ScrollText className="h-8 w-8 md:h-12 md:w-12 text-leo" />

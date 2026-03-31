@@ -21,7 +21,9 @@ export function Footer() {
               <Twitter className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/prakarshsingh"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-graygray-600 hover:text-leo transition-colors"
               aria-label="LinkedIn"
             >
