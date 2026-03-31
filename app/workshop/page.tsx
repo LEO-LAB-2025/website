@@ -82,10 +82,10 @@ const WorkshopPage: NextPage = () => {
   ];
 
   const videos = [
-    { src: assetPath("videos/leo_2025_1.mp4"), title: "LEO Conference 2025 — Keynote Highlights" },
-    { src: assetPath("videos/leo_2025_2.mp4"), title: "LEO Conference 2025 — Panel Discussion" },
-    { src: assetPath("videos/leo_2025_3.mp4"), title: "LEO Conference 2025 — Speaker Remarks" },
-    { src: assetPath("videos/leo_2025_4.mp4"), title: "LEO Conference 2025 — Research Sessions" },
+    { src: "videos/leo_2025_1.mp4", title: "LEO Conference 2025 — Keynote Highlights" },
+    { src: "videos/leo_2025_2.mp4", title: "LEO Conference 2025 — Panel Discussion" },
+    { src: "videos/leo_2025_3.mp4", title: "LEO Conference 2025 — Speaker Remarks" },
+    { src: "videos/leo_2025_4.mp4", title: "LEO Conference 2025 — Research Sessions" },
   ];
 
   return (
