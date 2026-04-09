@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ScrollText, Presentation, BookOpen, FileText, Award, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ScrollText, Presentation, BookOpen, FileText, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import researchPapers from '@/data/research-papers.json';
 
 interface Paper {
@@ -25,65 +25,13 @@ interface ResearchPapers {
   worksInProgress: Paper[];
 }
 
-const sponsorshipDetails = [
-  {
-    benefit: 'A short introduction about your organisation & its objectives during the conference',
-    silver: true,
-    gold: true,
-  },
-  {
-    benefit: 'Logo featured prominently on event banners and backdrops between sessions',
-    silver: true,
-    gold: true,
-  },
-  {
-    benefit: 'Logo placed prominently on conference website & social media posts',
-    silver: true,
-    gold: true,
-  },
-  {
-    benefit: 'Acknowledgement in opening and closing sessions by anchor of the conference',
-    silver: true,
-    gold: true,
-  },
-  {
-    benefit: 'Opportunity to distribute branded goodies to attendees',
-    silver: true,
-    gold: true,
-  },
-  {
-    benefit: 'No registration fees for upto 2 delegates',
-    silver: false,
-    gold: true,
-  },
-  {
-    benefit: '45 minutes panel discussion led by upto 2 delegates and a faculty member',
-    silver: false,
-    gold: true,
-  },
-  {
-    benefit: '2N / 3D stay at a 5 star hotel for upto 2 delegates',
-    silver: false,
-    gold: true,
-  },
-  {
-    benefit: 'Full access to all conference events, including the Gala dinner with the attendees for the 2 delegates',
-    silver: false,
-    gold: true,
-  },
-  {
-    benefit: 'Opportunity to host and share a new Call for Papers post-conference with the LEO lab faculty affiliates',
-    silver: false,
-    gold: true,
-  },
-];
+
 
 const ResearchPage: NextPage = () => {
   const [sponsorFormData, setSponsorFormData] = useState({
     name: '',
     email: '',
     companyName: '',
-    sponsorshipTier: '',
     message: ''
   });
 
@@ -109,7 +57,7 @@ const ResearchPage: NextPage = () => {
 
       if (response.ok) {
         setSponsorMessage({ type: 'success', text: 'Form submitted successfully!' });
-        setSponsorFormData({ name: '', email: '', companyName: '', sponsorshipTier: '', message: '' });
+        setSponsorFormData({ name: '', email: '', companyName: '', message: '' });
       } else {
         setSponsorMessage({ type: 'error', text: data.error || 'Something went wrong' });
       }
@@ -142,117 +90,6 @@ const ResearchPage: NextPage = () => {
             <p className="text-lg max-w-3xl mx-auto text-gray-700">
               Join us in advancing economic research and innovation. Your sponsorship helps foster groundbreaking research and meaningful discussions at the LEO Conference.
             </p>
-          </div>
-
-          {/* Desktop Table View (hidden on mobile) */}
-          <div className="hidden md:block">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="col-span-1">
-                {/* Header */}
-                <div className="p-6 bg-white rounded-t-lg shadow-md border border-gray-200">
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-bold text-gray-800">Features</h3>
-                    <div className="text-gray-500">Choose your tier</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-span-1">
-                {/* Header */}
-                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg shadow-md border border-gray-200">
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-bold text-gray-800">Silver</h3>
-                    <div className="text-3xl font-bold text-leo">₹4 Lakhs</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-span-1">
-                {/* Header */}
-                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-lg shadow-md border border-gray-200">
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-bold text-gray-800">Gold</h3>
-                    <div className="text-3xl font-bold text-leo">₹5 Lakhs</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Feature rows */}
-            {sponsorshipDetails.map((detail, index) => (
-              <div key={index} className="grid md:grid-cols-3 gap-8">
-                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center">
-                  <p className="text-gray-700">{detail.benefit}</p>
-                </div>
-                
-                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center justify-center">
-                  {detail.silver ? (
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                  ) : (
-                    <span className="h-6 w-6 text-gray-300">—</span>
-                  )}
-                </div>
-                
-                <div className="col-span-1 p-6 bg-white border-b border-x border-gray-200 flex items-center justify-center">
-                  {detail.gold ? (
-                    <CheckCircle className="h-6 w-6 text-green-500" />
-                  ) : (
-                    <span className="h-6 w-6 text-gray-300">—</span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          {/* Mobile Card View */}
-          <div className="md:hidden space-y-8">
-            {/* Silver Tier Card */}
-            <Card className="overflow-hidden border-2 border-gray-200">
-              <CardContent className="p-0">
-                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
-                  <div className="text-center space-y-2">
-                    <h3 className="text-xl font-bold text-gray-800">Silver Tier</h3>
-                    <div className="text-2xl font-bold text-leo">₹4 Lakhs</div>
-                  </div>
-                </div>
-                <div className="p-6 space-y-4">
-                  {sponsorshipDetails.map((detail, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      {detail.silver ? (
-                        <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                      ) : (
-                        <span className="h-5 w-5 text-gray-300 shrink-0 mt-0.5">—</span>
-                      )}
-                      <p className="text-sm text-gray-700">{detail.benefit}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Gold Tier Card */}
-            <Card className="overflow-hidden border-2 border-leo">
-              <CardContent className="p-0">
-                <div className="p-6 bg-gradient-to-br from-gray-50 to-gray-100 border-b border-gray-200">
-                  <div className="text-center space-y-2">
-                    <h3 className="text-xl font-bold text-gray-800">Gold Tier</h3>
-                    <div className="text-2xl font-bold text-leo">₹5 Lakhs</div>
-                  </div>
-                </div>
-                <div className="p-6 space-y-4">
-                  {sponsorshipDetails.map((detail, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      {detail.gold ? (
-                        <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                      ) : (
-                        <span className="h-5 w-5 text-gray-300 shrink-0 mt-0.5">—</span>
-                      )}
-                      <p className="text-sm text-gray-700">{detail.benefit}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </div>
 
           {/* Sponsorship Form */}
@@ -308,22 +145,6 @@ const ResearchPage: NextPage = () => {
                       className="w-full"
                       required
                     />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label htmlFor="sponsorshipTier" className="block text-sm font-medium text-gray-700">Sponsorship Tier</label>
-                    <select
-                      id="sponsorshipTier"
-                      name="sponsorshipTier"
-                      value={sponsorFormData.sponsorshipTier}
-                      onChange={handleSponsorInputChange}
-                      className="w-full px-3 py-2 rounded-md border border-gray-200 focus:outline-none focus:ring-2 focus:ring-leo bg-white"
-                      required
-                    >
-                      <option value="">Select a sponsorship tier</option>
-                      <option value="silver">Silver Sponsor (4 Lakhs)</option>
-                      <option value="gold">Gold Sponsor (5 Lakhs)</option>
-                    </select>
                   </div>
 
                   <div className="space-y-1.5">

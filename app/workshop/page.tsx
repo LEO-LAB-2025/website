@@ -120,23 +120,6 @@ const WorkshopPage: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="bg-white/70 p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold mb-4 flex items-center">
-                    <svg className="w-5 h-5 text-leo mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Important Dates
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center text-gray-700 bg-leo/5 p-3 rounded-lg">
-                      <span className="w-40 font-medium">Conference:</span>
-                      <span className="font-medium text-leo">April 24–26, 2026</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-6">
                 <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
                   <h3 className="font-semibold mb-4">Register Now</h3>
                   <Button
@@ -147,21 +130,9 @@ const WorkshopPage: NextPage = () => {
                   </Button>
                   <p className="text-sm text-gray-600 mt-4 text-center">Click to register to experience the conference at Plaksha University</p>
                 </div>
+              </div>
 
-                <div className="bg-white/70 p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold mb-4">Conference Topics</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {workshopTopics.map((topic, index) => (
-                      <div key={index} className="flex items-center space-x-2 p-2 rounded-md bg-leo/5 hover:bg-leo/10 transition-colors">
-                        <svg className="w-4 h-4 text-leo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                        <span className="text-gray-700">{topic}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+              <div className="space-y-6">
                 <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
                   <h3 className="font-semibold mb-4">Conference Schedule</h3>
                   <Link href="Conf_Schedule_2026.pdf" target="_blank" download>
@@ -550,6 +521,21 @@ const WorkshopPage: NextPage = () => {
                     <div className="text-gray-700">Mess</div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Conference Topics */}
+            <div className="bg-white/70 p-6 rounded-lg shadow-sm mt-8">
+              <h3 className="font-semibold mb-4">Conference Topics</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {workshopTopics.map((topic, index) => (
+                  <div key={index} className="flex items-center space-x-2 p-2 rounded-md bg-leo/5 hover:bg-leo/10 transition-colors">
+                    <svg className="w-4 h-4 text-leo flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                    <span className="text-gray-700">{topic}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
