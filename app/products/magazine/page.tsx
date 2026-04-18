@@ -8,7 +8,7 @@ export default function MagazinePage() {
 
         {/* 2026 Edition */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <a href="/magazine_2026.pdf" download className="bg-gradient-to-br from-leo/5 to-blue-50 rounded-xl p-6 flex items-center justify-center cursor-pointer hover:from-leo/10 hover:to-blue-100 transition-all">
+          <a href="magazine_2026.pdf" download className="bg-gradient-to-br from-leo/5 to-blue-50 rounded-xl p-6 flex items-center justify-center cursor-pointer hover:from-leo/10 hover:to-blue-100 transition-all">
             <div className="relative w-full max-w-[400px] aspect-[3/4]">
               <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg shadow-lg flex items-center justify-center">
                 <div className="text-center p-8">
@@ -35,7 +35,7 @@ export default function MagazinePage() {
             </div>
 
             <div className="pt-4">
-              <a href="/magazine_2026.pdf" download className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-leo hover:bg-leo/80 text-white h-10 py-2 px-4">
+              <a href="magazine_2026.pdf" download className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-leo hover:bg-leo/80 text-white h-10 py-2 px-4">
                 Download 2026 Magazine PDF
               </a>
             </div>
