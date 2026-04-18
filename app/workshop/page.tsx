@@ -101,49 +101,6 @@ const WorkshopPage: NextPage = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-leo text-center">The LEO Economics Conference 2026</h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto">Join us for a transformative gathering of minds in economic research — Theme: <span className="font-semibold text-leo">Future of Work</span></p>
 
-            {/* Registration + Quick Info */}
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-6">
-                <div className="bg-white/70 p-6 rounded-lg shadow-sm">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="bg-leo/10 p-3 rounded-full">
-                      <Calendar className="w-6 h-6 text-leo" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold">April 24–26, 2026</h3>
-                      <p className="text-gray-600">Plaksha University, Mohali</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-700 leading-relaxed">
-                    Selected participants will present their work to senior faculty members from India&apos;s leading academic institutions.
-                    Open to Faculty, Post-docs and PhD Candidates.
-                  </p>
-                </div>
-
-                <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
-                  <h3 className="font-semibold mb-4">Register Now</h3>
-                  <Button
-                    className="bg-leo hover:bg-leo/90 text-white font-medium py-2 px-6 rounded-lg transition-colors"
-                    onClick={() => window.open('https://rzp.io/rzp/YQbvtuN', '_blank')}
-                  >
-                    Register for Conference <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
-                  <p className="text-sm text-gray-600 mt-4 text-center">Click to register to experience the conference at Plaksha University</p>
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
-                  <h3 className="font-semibold mb-4">Conference Schedule</h3>
-                  <Link href="Conf_Schedule_2026.pdf" target="_blank" download>
-                    <Button className="bg-leo hover:bg-leo/80 text-white px-4 py-2 text-sm">
-                      Download Schedule PDF
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
             {/* ======= FULL 2026 SCHEDULE ======= */}
             <div className="bg-white/70 p-6 rounded-lg shadow-sm">
               <div className="flex flex-wrap items-center gap-4 mb-6">
@@ -520,6 +477,47 @@ const WorkshopPage: NextPage = () => {
                     <div className="font-medium">2:00 PM: Lunch</div>
                     <div className="text-gray-700">Mess</div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Registration and Download Section */}
+            <div className="grid md:grid-cols-2 gap-8 items-start mt-8">
+              <div className="bg-white/70 p-6 rounded-lg shadow-sm">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="bg-leo/10 p-3 rounded-full">
+                    <Calendar className="w-6 h-6 text-leo" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">April 24–26, 2026</h3>
+                    <p className="text-gray-600">Plaksha University, Mohali</p>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Selected participants will present their work to senior faculty members from India&apos;s leading academic institutions.
+                  Open to Faculty, Post-docs and PhD Candidates.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
+                  <h3 className="font-semibold mb-4">Register Now</h3>
+                  <Button
+                    className="bg-leo hover:bg-leo/90 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+                    onClick={() => window.open('https://rzp.io/rzp/YQbvtuN', '_blank')}
+                  >
+                    Register for Conference <ExternalLink className="ml-2 h-4 w-4" />
+                  </Button>
+                  <p className="text-sm text-gray-600 mt-4 text-center">Click to register to experience the conference at Plaksha University</p>
+                </div>
+
+                <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
+                  <h3 className="font-semibold mb-4">Download Agenda</h3>
+                  <Link href="Conf_Schedule_2026.pdf" target="_blank" download>
+                    <Button className="bg-leo hover:bg-leo/80 text-white px-4 py-2 text-sm">
+                      Download Schedule PDF
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
