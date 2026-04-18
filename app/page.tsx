@@ -8,11 +8,12 @@ import Image from 'next/image';
 import { assetPath } from '@/lib/assets';
 
 const carouselImages = [
-  { src: "h4.JPG", alt: "LEO Lab Research Activities 1" },
-  { src: "2.jpeg", alt: "LEO Lab Workshop Session" },
+  { src: "new_home1.jpg", alt: "LEO Lab Research Activities" },
+  { src: "h4.JPG", alt: "LEO Lab Team Activities" },
+  { src: "new_home2.jpg", alt: "LEO Lab Conference Session" },
   { src: "h1.JPG", alt: "LEO Lab Team" },
-  { src: "h2.JPG", alt: "LEO Lab Conference Session" },
-  { src: "h3.JPG", alt: "LEO Lab Panel Discussion" }
+  { src: "new_conf5.jpg", alt: "LEO Lab Panel Discussion" },
+  { src: "h3.JPG", alt: "LEO Lab Workshop" }
 ];
 
 const workshopTopics = [

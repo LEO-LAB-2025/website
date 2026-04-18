@@ -13,11 +13,12 @@ const WorkshopPage: NextPage = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const carouselImages = [
-    { src: "p2.JPG", alt: "LEO Conference 2025 Session" },
-    { src: "p1.JPG", alt: "LEO Conference 2025 Panel" },
-    { src: "p3.JPG", alt: "LEO Conference 2025 Keynote" },
-    { src: "p4.JPG", alt: "LEO Conference 2025 Audience" },
-    { src: "p5.JPG", alt: "LEO Conference 2025 Networking" },
+    { src: "new_conf1.jpg", alt: "LEO Conference 2025 Session" },
+    { src: "new_conf2.jpg", alt: "LEO Conference 2025 Panel Discussion" },
+    { src: "p2.JPG", alt: "LEO Conference 2025 Keynote" },
+    { src: "new_conf3.jpg", alt: "LEO Conference 2025 Audience" },
+    { src: "new_conf4.jpg", alt: "LEO Conference 2025 Networking" },
+    { src: "p4.JPG", alt: "LEO Conference 2025 Activities" },
   ];
 
   useEffect(() => {
