@@ -1,7 +1,6 @@
 'use client'
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -9,6 +8,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
+import { assetPath } from "@/lib/assets";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -30,14 +30,13 @@ export function Header() {
           {/* Logo */}
           <div className="flex-1 flex justify-center md:justify-start">
             <Link href="/" className="font-extrabold bg-white inline-block">
-              <Image
-                src="leo.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={assetPath("leo.png")}
                 alt="LEO Lab Logo"
                 width={130}
                 height={20}
                 className="p-2 scale-75 md:scale-100 w-auto md:h-[80px] h-[65px]"
-                quality={100}
-                priority
               />
             </Link>
           </div>
