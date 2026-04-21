@@ -182,7 +182,7 @@ const WorkshopPage: NextPage = () => {
                     <div className="font-medium">6:00 PM – 6:30 PM: Tea / Coffee Break</div>
                   </div>
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">6:30 PM – 7:30 PM: Research in Plaksha</div>
+                    <div className="font-medium">6:30 PM – 7:30 PM: Traditional Night</div>
                     <div className="text-gray-700">Usha Hasteer Auditorium</div>
                   </div>
                   <div className="bg-leo/5 p-3 rounded-lg">
@@ -314,8 +314,12 @@ const WorkshopPage: NextPage = () => {
                     <div className="font-medium">4:00 PM – 4:30 PM: Tea / Coffee Break</div>
                   </div>
                   <div className="bg-leo/5 p-3 rounded-lg">
-                    <div className="font-medium">4:30 PM – 6:00 PM: Viksit Bharat Session</div>
-                    <div className="text-gray-700">Speakers: Mr. Vivek Srivastava, Ms. Rimy Oberoi | Room 2101</div>
+                    <div className="font-medium">4:30 PM – 5:15 PM: Viksit Bharat Session</div>
+                    <div className="text-gray-700">Room 2101</div>
+                  </div>
+                  <div className="bg-leo/5 p-3 rounded-lg">
+                    <div className="font-medium">5:15 PM – 6:00 PM: Research at Plaksha</div>
+                    <div className="text-gray-700">Room 2101</div>
                   </div>
 
                   {/* Parallel Sessions 4A & 4B */}
