@@ -518,7 +518,7 @@ const WorkshopPage: NextPage = () => {
 
                 <div className="bg-white/70 p-6 rounded-lg shadow-sm flex flex-col items-center">
                   <h3 className="font-semibold mb-4">Download Agenda</h3>
-                  <Link href="Conf_Schedule_2026.pdf" target="_blank" download>
+                  <Link href="The LEO Economics Conference Schedule (1).pdf" target="_blank" download>
                     <Button className="bg-leo hover:bg-leo/80 text-white px-4 py-2 text-sm">
                       Download Schedule PDF
                     </Button>
